@@ -41,10 +41,17 @@ const LandingPage = () => {
       </header>
       <section className="content">
         <div className={`fade-section custom-section-1 visible`} ref={(el) => (sectionsRef.current[0] = el)}>
-          <video className="background-video" src={require("./res/videos/Landing-vid.mp4")} type="video/mp4" autoPlay loop muted />
+          <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -50px 90px black', zIndex: '2'}}/>
+          <video className="background-video fit" src={require("./res/videos/Landing-vid.mp4")} type="video/mp4" autoPlay loop muted />
+          <div className="landing-nav"> 
+            <button className="undeline-anim" onClick={() => scrollToSection(4)}>SAWY-SAWY</button>
+            <button className="undeline-anim" onClick={() => scrollToSection(4)}>PROGRAMS</button>
+            <button className="undeline-anim" onClick={() => scrollToSection(4)}>FACILITIES</button>
+          </div>
           <div className="arrow-indicator">▼</div>
         </div>
         <div className="fade-section custom-section-2" ref={(el) => (sectionsRef.current[1] = el)}>
+        <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -50px 90px black', zIndex: '2'}}/>
           <video className="background-video" src={require("./res/videos/Sawy-commercial-edit-1.mp4")} type="video/mp4" autoPlay loop muted />
           <h2>SCALABLE SOLUTIONS</h2>
           <div className="text-box">
@@ -53,6 +60,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="fade-section custom-section-3" ref={(el) => (sectionsRef.current[2] = el)}>
+        <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -50px 90px black', zIndex: '2'}}/>
           <video className="background-video" src={require("./res/videos/Crowd.mp4")} type="video/mp4" autoPlay loop muted />
           <h2>INSPIRING COMMUNITIES</h2>
         </div>
@@ -63,7 +71,6 @@ const LandingPage = () => {
           <h2>SAWY-SAWY</h2>
           <div className="text-box">
             <p>The Sawy-Sawy is a high impact, scalable solution to STEAM education.</p>
-            <button> Learn more </button>
           </div>
         </div>
         <div className="fade-section custom-section-6" ref={(el) => (sectionsRef.current[5] = el)}>

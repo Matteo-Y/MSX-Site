@@ -15,6 +15,9 @@
   box-shadow: none;
 }
 .landing-page .sticky-header h1 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   font-family: "aerospace";
   font-size: 4rem;
   margin: 0;

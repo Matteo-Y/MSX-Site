@@ -64,21 +64,25 @@
 .landing-page .fade-section h2 {
   color: white;
   font-size: 3rem;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+}
+.landing-page .fade-section h3 {
+  color: white;
+  font-size: 2rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   z-index: 2;
   transition: all 0.5s ease-in-out;
   text-align: center;
 }
-.landing-page .fade-section h2.fade-in {
-  opacity: 1;
-}
-.landing-page .fade-section h2.fade-out {
-  opacity: 0;
-}
 .landing-page .fade-section .text-box {
   background-color: black;
   z-index: 2;
+  margin-top: 20px;
   padding: 20px;
   text-align: center;
 }
@@ -99,15 +103,6 @@
 .landing-page .fade-section .text-box button:hover {
   background-color: #999;
 }
-.landing-page .section-1-bg1 {
-  background-image: url("../res/bg-images/s1-backgrounds/1.jpg");
-}
-.landing-page .section-1-bg2 {
-  background-image: url("../res/bg-images/s1-backgrounds/2.jpg");
-}
-.landing-page .section-1-bg3 {
-  background-image: url("../res/bg-images/s1-backgrounds/3.jpg");
-}
 .landing-page .custom-section-1 {
   background-color: black;
 }
@@ -115,7 +110,7 @@
   background-color: black;
 }
 .landing-page .custom-section-3 {
-  background-color: black;
+  background-image: url("../res/bg-images/3.jpg");
 }
 .landing-page .custom-section-4 {
   background-image: url("../res/bg-images/5.jpg");
@@ -123,6 +118,10 @@
 .landing-page .custom-section-5 {
   background-image: url("../res/bg-images/4.jpg");
 }
+.landing-page .custom-section-6 {
+  background-image: url("../res/bg-images/24.jpg");
+}
+
 .undeline-anim {
   position: relative;
   overflow: hidden;

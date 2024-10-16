@@ -69,24 +69,27 @@
     h2 {
       color: white;
       font-size: 3rem;
+      margin-bottom: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      z-index: 2;
+      transition: all 0.5s ease-in-out;
+      text-align: center;
+    }
+
+    h3 {
+      color: white;
+      font-size: 2rem;
       margin-bottom: 20px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       z-index: 2;
       transition: all 0.5s ease-in-out;
       text-align: center;
-
-      &.fade-in {
-        opacity: 1;
-      }
-    
-      &.fade-out {
-        opacity: 0;
-      }
     }
 
     .text-box {
       background-color: black;
       z-index: 2;
+      margin-top: 20px;
       padding: 20px;
       text-align: center;
 
@@ -112,12 +115,6 @@
     }
   }
 
-  $s1-backgrounds: url("../res/bg-images/s1-backgrounds/1.jpg"), url("../res/bg-images/s1-backgrounds/2.jpg"), url("../res/bg-images/s1-backgrounds/3.jpg");
-  @for $i from 1 through length($s1-backgrounds) {
-    .section-1-bg#{$i} {
-     background-image: nth($s1-backgrounds, $i);
-    }
-  }
   .custom-section-1 {
     background-color: black;
   }
@@ -127,7 +124,7 @@
   }
 
   .custom-section-3 {
-    background-color: black;
+    background-image: url("../res/bg-images/3.jpg");
   }
 
   .custom-section-4 {
@@ -139,11 +136,7 @@
   }
 
   .custom-section-6 {
-    
-  }
-
-  .custom-section-7 {
-    
+    background-image: url("../res/bg-images/24.jpg");
   }
 }
 

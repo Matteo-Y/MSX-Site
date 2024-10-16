@@ -1,0 +1,174 @@
+.landing-page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  .sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: none;
+
+    h1 {
+      font-family: "aerospace";
+      font-size: 4rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    height: 600vh;
+    position: relative;
+  }
+
+  .fade-section {
+    background-color: #333;
+    background-position: center;
+    background-size: cover;
+    color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    z-index: 0;
+    box-shadow: inset 0 -50px 90px black;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 1;
+    }
+
+    .background-video {
+      position: absolute;
+      opacity: 0.8;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    h2 {
+      color: white;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      z-index: 2;
+      transition: all 0.5s ease-in-out;
+      text-align: center;
+
+      &.fade-in {
+        opacity: 1;
+      }
+    
+      &.fade-out {
+        opacity: 0;
+      }
+    }
+
+    .text-box {
+      background-color: black;
+      z-index: 2;
+      padding: 20px;
+      text-align: center;
+
+      p {
+        color: white;
+        line-height: 1.6;
+        margin: 10px 0;
+        font-size: 1.5rem;
+      }
+
+      button {
+        background-color: white;
+        border: none;
+        padding: 10px;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      button:hover {
+        background-color: #999;
+      }
+    }
+  }
+
+  $s1-backgrounds: url("../res/bg-images/s1-backgrounds/1.jpg"), url("../res/bg-images/s1-backgrounds/2.jpg"), url("../res/bg-images/s1-backgrounds/3.jpg");
+  @for $i from 1 through length($s1-backgrounds) {
+    .section-1-bg#{$i} {
+     background-image: nth($s1-backgrounds, $i);
+    }
+  }
+  .custom-section-1 {
+    background-color: black;
+  }
+
+  .custom-section-2 {
+    background-color: black;
+  }
+
+  .custom-section-3 {
+    background-color: black;
+  }
+
+  .custom-section-4 {
+    background-image: url("../res/bg-images/5.jpg");
+  }
+
+  .custom-section-5 {
+    background-image: url("../res/bg-images/4.jpg");
+  }
+
+  .custom-section-6 {
+    
+  }
+
+  .custom-section-7 {
+    
+  }
+}
+
+.arrow-indicator {
+  color: white;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  opacity: 0;
+  animation: fadeMove 3s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes fadeMove {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 0px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, 35px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 40px);
+  }
+}

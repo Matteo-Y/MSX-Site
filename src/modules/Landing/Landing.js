@@ -41,17 +41,17 @@ const LandingPage = () => {
       </header>
       <section className="content">
         <div className={`fade-section custom-section-1 visible`} ref={(el) => (sectionsRef.current[0] = el)}>
-          <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -50px 90px black', zIndex: '2'}}/>
+          <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -80px 90px black', zIndex: '2'}}/>
           <video className="background-video fit" src={require("./res/videos/Landing-vid.mp4")} type="video/mp4" autoPlay loop muted />
           <div className="landing-nav"> 
             <button className="undeline-anim" onClick={() => scrollToSection(4)}>SAWY-SAWY</button>
-            <button className="undeline-anim" onClick={() => scrollToSection(5)}>PARTNERSHIPS</button>
+            <button className="undeline-anim" onClick={() => scrollToSection(3)}>PROJECTS</button>
             <button className="undeline-anim" onClick={() => scrollToSection(2)}>FACILITIES</button>
           </div>
           <div className="arrow-indicator">▼</div>
         </div>
         <div className="fade-section custom-section-2" ref={(el) => (sectionsRef.current[1] = el)}>
-          <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -50px 90px black', zIndex: '2'}}/>
+          <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -80px 90px black', zIndex: '2'}}/>
           <video className="background-video" src={require("./res/videos/Sawy-commercial-edit-1.mp4")} type="video/mp4" autoPlay loop muted />
           <h2>SCALABLE SOLUTIONS</h2>
           <div className="text-box">
@@ -62,9 +62,12 @@ const LandingPage = () => {
         <div className="fade-section custom-section-3" ref={(el) => (sectionsRef.current[2] = el)}>
           <h2>S3</h2>
           <h3>SAWY SAWY SOCIETY</h3>
+          <h3 className="fixed-caption bottom-left">3D printed camel sculpture measured at 2 meters tall</h3>
         </div>
         <div className="fade-section custom-section-4" ref={(el) => (sectionsRef.current[3] = el)}>
           <h2>NEXT LEVEL PROJECTS</h2>
+          <button className="solid-button" onClick={() => {}}> See more </button>
+          <h3 className="fixed-caption bottom-right">3D printed longhorn bull<br/> with the colors of the American flag</h3>
         </div>
         <div className="fade-section custom-section-5" ref={(el) => (sectionsRef.current[4] = el)}>
           <h2>SAWY-SAWY</h2>

@@ -60,9 +60,8 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="fade-section custom-section-3" ref={(el) => (sectionsRef.current[2] = el)}>
-          <h2>S3</h2>
-          <h3>SAWY SAWY SOCIETY</h3>
-          <h3 className="fixed-caption bottom-left">3D printed camel sculpture measured at 2 meters tall</h3>
+          <h2 style={{fontSize: "5rem"}}>S3</h2>
+          <h3 className="fixed-caption bottom-left">Sawy the camel</h3>
         </div>
         <div className="fade-section custom-section-4" ref={(el) => (sectionsRef.current[3] = el)}>
           <h2>NEXT LEVEL PROJECTS</h2>
@@ -72,7 +71,9 @@ const LandingPage = () => {
         <div className="fade-section custom-section-5" ref={(el) => (sectionsRef.current[4] = el)}>
           <h2>SAWY-SAWY</h2>
           <div className="text-box">
-            <p>The Sawy-Sawy is a high impact, scalable solution to STEAM education.</p>
+            <p>Providing a high impact, scalable solution to STEAM education.</p>
+            <button onClick={() => {}}> Kits </button>
+            <button onClick={() => {}}> Programs </button>
           </div>
         </div>
         <div className="fade-section custom-section-6" ref={(el) => (sectionsRef.current[5] = el)}>

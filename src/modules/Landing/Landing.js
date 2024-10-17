@@ -4,6 +4,7 @@ import './styles/Landing.scss';
 
 const LandingPage = () => {
   const sectionsRef = useRef([]);
+  const [headerAnim, setHeaderAnim] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +27,14 @@ const LandingPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHeaderAnim(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const scrollToSection = (index) => {
     const section = sectionsRef.current[index];
     if (section) {
@@ -38,11 +47,11 @@ const LandingPage = () => {
   return (
     <div className="landing-page">
       <header className="sticky-header">
-        <h1 onClick={() => scrollToSection(0)}>SUBOTIX</h1>
+        <h1 className={headerAnim ? "animated" : ""} onClick={() => scrollToSection(0)}>SUBOTIX</h1>
       </header>
       <section className="content">
         <div className="fade-section custom-section-1 visible" ref={(el) => (sectionsRef.current[0] = el)}>
-          
+          <div className="landing-captions"><TypingEffect words={["IMPACTFUL", "EXCITING", "STEAM", "SCALABLE", "SUSTAINABLE"]} index={2}/></div>
         </div>
         <div className="fade-section custom-section-2" ref={(el) => (sectionsRef.current[1] = el)}>
           <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -80px 90px black', zIndex: '2'}}/>

@@ -1,36 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const TypingEffect = ({ texts, delSpeed, typeSpeed }) => {
-  const [displayText, setDisplayText] = useState('');
-  const [textIndex, setTextIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [charIndex, setCharIndex] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(150);
+const TypingEffect = ({ words, index }) => {
+  const [displayedText, setDisplayedText] = useState('');
+  const [charIndex, setCharIndex] = useState(0); // Track the current character index
 
   useEffect(() => {
-    const currentText = texts[textIndex];
+    const currentWord = words[index];
 
-    const typingEffect = setTimeout(() => {
-      if (!isDeleting && charIndex < currentText.length) {
-        setDisplayText((prev) => prev + currentText[charIndex]);
+    const type = () => {
+      if (charIndex < currentWord.length) {
+        // Typing forward
+        setDisplayedText((prev) => prev + currentWord.charAt(charIndex));
         setCharIndex(charIndex + 1);
-        setTypingSpeed(typeSpeed ? typeSpeed : 150); // Typing speed
-      } else if (isDeleting && charIndex > 0) {
-        setDisplayText(currentText.substring(0, charIndex - 1));
-        setCharIndex(charIndex - 1);
-        setTypingSpeed(delSpeed ? delSpeed : 100); // Deleting speed
-      } else if (!isDeleting && charIndex === currentText.length) {
-        setTimeout(() => setIsDeleting(true), 1000); // Delay before starting to delete
-      } else if (isDeleting && charIndex === 0) {
-        setIsDeleting(false);
-        setTextIndex((prev) => (prev + 1) % texts.length); // Move to next text
       }
-    }, typingSpeed);
+    };
 
-    return () => clearTimeout(typingEffect);
-  }, [charIndex, isDeleting, texts, textIndex, typingSpeed]);
+    const timer = setTimeout(type, 100); // Typing speed
 
-  return <h2>{displayText}</h2>;
+    return () => clearTimeout(timer); // Clean up the timer on every change
+  }, [charIndex, words, index]);
+
+  useEffect(() => {
+    // Reset typing state when the index changes to a new word
+    setDisplayedText(''); // Clear the displayed text immediately when changing words
+    setCharIndex(0); // Reset the character index
+  }, [index]);
+
+  return <p>{displayedText}</p>;
 };
 
 export default TypingEffect;

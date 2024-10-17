@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import TypingEffect from '../Tools/TypingEffect';
 import './styles/Landing.scss';
 
 const LandingPage = () => {
@@ -40,15 +41,8 @@ const LandingPage = () => {
         <h1 onClick={() => scrollToSection(0)}>SUBOTIX</h1>
       </header>
       <section className="content">
-        <div className={`fade-section custom-section-1 visible`} ref={(el) => (sectionsRef.current[0] = el)}>
-          <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -80px 90px black', zIndex: '2'}}/>
-          <video className="background-video fit" src={require("./res/videos/Landing-vid.mp4")} type="video/mp4" autoPlay loop muted />
-          <div className="landing-nav"> 
-            <button className="undeline-anim" onClick={() => scrollToSection(4)}>SAWY-SAWY</button>
-            <button className="undeline-anim" onClick={() => scrollToSection(3)}>PROJECTS</button>
-            <button className="undeline-anim" onClick={() => scrollToSection(2)}>FACILITIES</button>
-          </div>
-          <div className="arrow-indicator">▼</div>
+        <div className="fade-section custom-section-1 visible" ref={(el) => (sectionsRef.current[0] = el)}>
+          
         </div>
         <div className="fade-section custom-section-2" ref={(el) => (sectionsRef.current[1] = el)}>
           <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -80px 90px black', zIndex: '2'}}/>

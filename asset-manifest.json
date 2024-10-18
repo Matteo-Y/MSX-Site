@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.css": "/Subotix-Site/static/css/main.79a415bd.css",
-    "main.js": "/Subotix-Site/static/js/main.9c283756.js",
+    "main.css": "/Subotix-Site/static/css/main.9334efc3.css",
+    "main.js": "/Subotix-Site/static/js/main.cc37b84d.js",
     "static/media/Sawy-commercial-edit-1.mp4": "/Subotix-Site/static/media/Sawy-commercial-edit-1.18125013c3b76ca838a6.mp4",
-    "static/media/Landing-vid.mp4": "/Subotix-Site/static/media/Landing-vid.0e0a56edd328e3854384.mp4",
+    "static/media/1.jpg": "/Subotix-Site/static/media/1.9859ad8779c005b5108e.jpg",
+    "static/media/2.jpg": "/Subotix-Site/static/media/2.58a52af7fc601bf3d035.jpg",
     "static/media/24.jpg": "/Subotix-Site/static/media/24.68ee4da130d2815b8f07.jpg",
+    "static/media/66.jpg": "/Subotix-Site/static/media/66.e1cbc1cbf665fd81b63d.jpg",
+    "static/media/91.jpg": "/Subotix-Site/static/media/91.0ee679c8abe99133d411.jpg",
     "static/media/3.jpg": "/Subotix-Site/static/media/3.01d9dd83c3518ab03b24.jpg",
     "static/media/5.5.jpg": "/Subotix-Site/static/media/5.5.71ee3da2134b124f4e6a.jpg",
     "static/media/5.jpg": "/Subotix-Site/static/media/5.878e623fb1e95d5c621e.jpg",
@@ -12,11 +15,11 @@
     "static/media/4.jpg": "/Subotix-Site/static/media/4.af7ea1b5ed45452687c0.jpg",
     "static/media/Aerospace.ttf": "/Subotix-Site/static/media/Aerospace.0342d6f9ff59f84eda4b.ttf",
     "index.html": "/Subotix-Site/index.html",
-    "main.79a415bd.css.map": "/Subotix-Site/static/css/main.79a415bd.css.map",
-    "main.9c283756.js.map": "/Subotix-Site/static/js/main.9c283756.js.map"
+    "main.9334efc3.css.map": "/Subotix-Site/static/css/main.9334efc3.css.map",
+    "main.cc37b84d.js.map": "/Subotix-Site/static/js/main.cc37b84d.js.map"
   },
   "entrypoints": [
-    "static/css/main.79a415bd.css",
-    "static/js/main.9c283756.js"
+    "static/css/main.9334efc3.css",
+    "static/js/main.cc37b84d.js"
   ]
 }

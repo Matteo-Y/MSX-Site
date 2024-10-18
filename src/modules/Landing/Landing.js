@@ -2,9 +2,24 @@ import React, { useEffect, useRef, useState } from 'react';
 import TypingEffect from '../Tools/TypingEffect';
 import './styles/Landing.scss';
 
+const landingTitles = [
+  "",
+  "IMPACT",
+  "SCALABLE",
+  "COMMUNITY"
+]
+const landingCaptions= [
+  "We design impactful, scalable STEAM solutions for your community",
+  "Projects designed to inspire and build skills",
+  "Aimed to reach all people of all ages and backgrounds",
+  "Bringing together and connecting Makers"
+]
+
 const LandingPage = () => {
   const sectionsRef = useRef([]);
   const [headerAnim, setHeaderAnim] = useState(false);
+  const [landingCaptionIndex, setLandingCaptionIndex] = useState(0);
+  const [landingIndex, setLandingIndex] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,11 +43,45 @@ const LandingPage = () => {
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timers = [];
+    timers[0] = setTimeout(() => {
       setHeaderAnim(true);
-    }, 2000);
+    }, 4000);
 
-    return () => clearTimeout(timer);
+    const loop = () => {
+      timers[1] = setTimeout(() => {
+        setLandingCaptionIndex(1);
+      }, 4300);
+      timers[2] = setTimeout(() => {
+        setLandingIndex(1);
+      }, 5000);
+      timers[3] = setTimeout(() => {
+        setLandingCaptionIndex(2);
+      }, 11000);
+      timers[4] = setTimeout(() => {
+        setLandingIndex(2);
+      }, 12000);
+      timers[5] = setTimeout(() => {
+        setLandingCaptionIndex(3);
+      }, 17000);
+      timers[6] = setTimeout(() => {
+        setLandingIndex(3);
+      }, 18000);
+    }
+
+    loop();
+    const loopInterval = setInterval(() => {
+      loop();
+    }, 22000);
+
+    
+    
+    return () => {
+      for(let i = 0; i < timers.length; i++) {
+        clearTimeout(timers[i]);
+      }
+      clearInterval(loopInterval);
+    }
   }, []);
 
   const scrollToSection = (index) => {
@@ -50,8 +99,13 @@ const LandingPage = () => {
         <h1 className={headerAnim ? "animated" : ""} onClick={() => scrollToSection(0)}>SUBOTIX</h1>
       </header>
       <section className="content">
-        <div className="fade-section custom-section-1 visible" ref={(el) => (sectionsRef.current[0] = el)}>
-          <div className="landing-captions"><TypingEffect words={["IMPACTFUL", "EXCITING", "STEAM", "SCALABLE", "SUSTAINABLE"]} index={2}/></div>
+        <div className={"fade-section custom-section-1 visible bg" + landingIndex} ref={(el) => (sectionsRef.current[0] = el)}>
+          <div className="background-image bg0"></div>
+          <div className="background-image bg1"></div>
+          <div className="background-image bg2"></div>
+          <div className="background-image bg3"></div>
+          <h2>{landingTitles[landingIndex]}</h2>
+          <div className="landing-captions"><TypingEffect words={landingCaptions} index={landingCaptionIndex} typeSpeed={50} delSpeed={20}/></div>
         </div>
         <div className="fade-section custom-section-2" ref={(el) => (sectionsRef.current[1] = el)}>
           <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -80px 90px black', zIndex: '2'}}/>

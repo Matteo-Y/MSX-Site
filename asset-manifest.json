@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Subotix-Site/static/css/main.e32af4f4.css",
+    "main.css": "/Subotix-Site/static/css/main.3d33c7c5.css",
     "main.js": "/Subotix-Site/static/js/main.424441a9.js",
     "static/media/Sawy-commercial-edit-1.mp4": "/Subotix-Site/static/media/Sawy-commercial-edit-1.18125013c3b76ca838a6.mp4",
     "static/media/1.jpg": "/Subotix-Site/static/media/1.9859ad8779c005b5108e.jpg",
@@ -15,11 +15,11 @@
     "static/media/4.jpg": "/Subotix-Site/static/media/4.af7ea1b5ed45452687c0.jpg",
     "static/media/Aerospace.ttf": "/Subotix-Site/static/media/Aerospace.0342d6f9ff59f84eda4b.ttf",
     "index.html": "/Subotix-Site/index.html",
-    "main.e32af4f4.css.map": "/Subotix-Site/static/css/main.e32af4f4.css.map",
+    "main.3d33c7c5.css.map": "/Subotix-Site/static/css/main.3d33c7c5.css.map",
     "main.424441a9.js.map": "/Subotix-Site/static/js/main.424441a9.js.map"
   },
   "entrypoints": [
-    "static/css/main.e32af4f4.css",
+    "static/css/main.3d33c7c5.css",
     "static/js/main.424441a9.js"
   ]
 }

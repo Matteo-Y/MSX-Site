@@ -11,7 +11,7 @@ const landingTitles = [
 const landingCaptions= [
   "We design impactful, scalable STEAM solutions for your community",
   "Projects designed to inspire and build skills",
-  "Aimed to reach all people of all ages and backgrounds",
+  "Aimed to reach people of all ages and backgrounds",
   "Bringing together and connecting Makers"
 ]
 

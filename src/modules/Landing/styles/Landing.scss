@@ -27,7 +27,7 @@
     @media (max-width: 550px) {
       h1 {
         font-size: 65px;
-        transform: translateY(40vh) scale(1.5);
+        transform: translateY(40vh);
         &.animated {animation: headerAnimMobile 1s forwards;}
       }
     }
@@ -47,10 +47,10 @@
     }
     @keyframes headerAnimMobile{
       0% {
-        transform: translateY(40vh) scale(1.5);
+        transform: translateY(40vh);
       }
       100% {
-        transform: translateY(0) scale(1);
+        transform: translateY(0);
       }
     }
   }

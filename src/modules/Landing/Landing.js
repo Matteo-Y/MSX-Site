@@ -8,6 +8,7 @@ const landingTitles = [
   "SCALABLE",
   "COMMUNITY"
 ]
+const titleSectionMap = [0, 3, 1, 2]
 const landingCaptions= [
   "We design impactful, scalable STEAM solutions for your community",
   "Projects designed to inspire and build skills",
@@ -30,6 +31,7 @@ const LandingPage = () => {
         const sectionEnd = sectionStart + window.innerHeight;
 
         if (scrollTop >= sectionStart - window.innerHeight / 2 && scrollTop < sectionEnd - window.innerHeight / 2) {
+          setHeaderAnim(true);
           section.classList.add('visible');
         } else {
           section.classList.remove('visible');
@@ -104,7 +106,7 @@ const LandingPage = () => {
           <div className="background-image bg1"></div>
           <div className="background-image bg2"></div>
           <div className="background-image bg3"></div>
-          <h2>{landingTitles[landingIndex]}</h2>
+          <button className="underline-anim" onClick={() => scrollToSection(titleSectionMap[landingIndex])}>{landingTitles[landingIndex]}</button>
           <div className="landing-captions"><TypingEffect words={landingCaptions} index={landingCaptionIndex} typeSpeed={50} delSpeed={20}/></div>
         </div>
         <div className="fade-section custom-section-2" ref={(el) => (sectionsRef.current[1] = el)}>
@@ -121,8 +123,8 @@ const LandingPage = () => {
           <h3 className="fixed-caption bottom-left">Sawy the camel</h3>
         </div>
         <div className="fade-section custom-section-4" ref={(el) => (sectionsRef.current[3] = el)}>
-          <h2>NEXT LEVEL PROJECTS</h2>
-          <button className="solid-button" onClick={() => {}}> See more </button>
+          <h2>MAKING NEXT LEVEL PROJECTS</h2>
+          <a className="solid-button" href=""> See more </a>
           <h3 className="fixed-caption bottom-right">3D printed longhorn bull<br/> with the colors of the American flag</h3>
         </div>
         <div className="fade-section custom-section-5" ref={(el) => (sectionsRef.current[4] = el)}>

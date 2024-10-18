@@ -239,11 +239,13 @@
 
 .solid-button {
   background-color: white;
+  color: black;
   border: none;
   margin: 20px;
   padding: 10px;
   font-size: 2rem;
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.2s;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
@@ -258,19 +260,19 @@
   background-color: #999;
 }
 
-.undeline-anim {
+.underline-anim {
   position: relative;
   overflow: hidden;
 
   &::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 7px;
     left: 0;
     width: 100%;
     height: 4px;
     background-color: white;
-    transition: opacity 300ms, transform 300ms;
+    transition: opacity 1s, transform 300ms;
     opacity: 1;
     transform: translate3d(-100%, 0, 0);
   }
@@ -279,45 +281,6 @@
     transform: translate3d(0, 0, 0);
   }
 } 
-
-.landing-nav {
-  position: fixed;
-  bottom: 110px;
-  left: 5%;
-  z-index: 3;
-
-  button {
-    background: none;
-    color: white;
-    border: none;
-    font-size: 2rem;
-    margin: 0 20px 0 20px;
-    padding: 0.2em 0;
-    cursor: pointer;
-  }
-}
-@media (max-width: 500px) {
-  .landing-nav {
-    display: none;
-  }
-}
-@media (max-height: 500px) {
-  .landing-nav {
-    display: none;
-  }
-}
-
-.arrow-indicator {
-  color: white;
-  position: fixed;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 4rem;
-  opacity: 0;
-  animation: fadeMove 3s ease-in-out infinite;
-  z-index: 2;
-}
 
 @keyframes fadeMove {
   0% {
@@ -364,15 +327,19 @@
   .bg2 { background-image: url("../res/bg-images/landing-images/1.jpg"); }
   .bg3 { background-image: url("../res/bg-images/landing-images/2.jpg"); }
 
-  h2 {
+  button {
+    background: none;
+    border: none;
+    color: white;
     position: fixed;
+    cursor: pointer;
     top:300px;
     font-size: 200px !important;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin: 0;
   }
   @media (max-width: 1300px) {
-    h2 {
+    button {
       position: fixed;
       top:200px;
       font-size: 120px !important;
@@ -380,21 +347,21 @@
     }
   }
   @media (max-width: 800px) {
-    h2 {
+    button {
       top:200px;
       font-size: 80px !important;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
   }
   @media (max-width: 500px) {
-    h2 {
+    button {
       top:230px;
       font-size: 55px !important;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
   }
   @media (max-height: 500px) {
-    h2 {
+    button {
       top: 100px !important;
     }
   }

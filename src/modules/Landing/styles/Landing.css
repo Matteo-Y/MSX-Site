@@ -381,7 +381,6 @@
 }
 @media (max-width: 800px) {
   .custom-section-1 h2 {
-    position: fixed;
     top: 200px;
     font-size: 80px !important;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -389,10 +388,14 @@
 }
 @media (max-width: 500px) {
   .custom-section-1 h2 {
-    position: fixed;
     top: 230px;
     font-size: 55px !important;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+}
+@media (max-height: 500px) {
+  .custom-section-1 h2 {
+    top: 100px !important;
   }
 }
 .custom-section-1 .landing-captions p {
@@ -429,5 +432,10 @@
     left: 15%;
     width: 70%;
     font-size: 30px;
+  }
+}
+@media (max-height: 500px) {
+  .custom-section-1 .landing-captions p {
+    top: 200px;
   }
 }/*# sourceMappingURL=Landing.css.map */

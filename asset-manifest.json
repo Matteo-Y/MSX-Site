@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.24b027ea.css",
-    "main.js": "/static/js/main.4f58d456.js",
+    "main.js": "/static/js/main.1333779a.js",
     "static/media/Sawy-commercial-edit-1.mp4": "/static/media/Sawy-commercial-edit-1.18125013c3b76ca838a6.mp4",
     "static/media/60.jpg": "/static/media/60.9859ad8779c005b5108e.jpg",
     "static/media/50.jpg": "/static/media/50.7061c91652fc4a8a1af1.jpg",
@@ -32,10 +32,10 @@
     "static/media/Aerospace.ttf": "/static/media/Aerospace.0342d6f9ff59f84eda4b.ttf",
     "index.html": "/index.html",
     "main.24b027ea.css.map": "/static/css/main.24b027ea.css.map",
-    "main.4f58d456.js.map": "/static/js/main.4f58d456.js.map"
+    "main.1333779a.js.map": "/static/js/main.1333779a.js.map"
   },
   "entrypoints": [
     "static/css/main.24b027ea.css",
-    "static/js/main.4f58d456.js"
+    "static/js/main.1333779a.js"
   ]
 }

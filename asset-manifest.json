@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.fbf72145.css",
-    "main.js": "/static/js/main.351bf73f.js",
+    "main.css": "/static/css/main.9425191b.css",
+    "main.js": "/static/js/main.35103bea.js",
     "static/media/Sawy-commercial-edit-1.mp4": "/static/media/Sawy-commercial-edit-1.18125013c3b76ca838a6.mp4",
     "static/media/1.jpg": "/static/media/1.9859ad8779c005b5108e.jpg",
-    "static/media/2.jpg": "/static/media/2.58a52af7fc601bf3d035.jpg",
+    "static/media/2.jpg": "/static/media/2.96ead49c8a3fc2a46af1.jpg",
+    "static/media/61.jpg": "/static/media/61.f30783c4e6db7f9369b7.jpg",
     "static/media/24.jpg": "/static/media/24.68ee4da130d2815b8f07.jpg",
     "static/media/66.jpg": "/static/media/66.e1cbc1cbf665fd81b63d.jpg",
     "static/media/91.jpg": "/static/media/91.0ee679c8abe99133d411.jpg",
@@ -15,11 +16,11 @@
     "static/media/4.jpg": "/static/media/4.af7ea1b5ed45452687c0.jpg",
     "static/media/Aerospace.ttf": "/static/media/Aerospace.0342d6f9ff59f84eda4b.ttf",
     "index.html": "/index.html",
-    "main.fbf72145.css.map": "/static/css/main.fbf72145.css.map",
-    "main.351bf73f.js.map": "/static/js/main.351bf73f.js.map"
+    "main.9425191b.css.map": "/static/css/main.9425191b.css.map",
+    "main.35103bea.js.map": "/static/js/main.35103bea.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbf72145.css",
-    "static/js/main.351bf73f.js"
+    "static/css/main.9425191b.css",
+    "static/js/main.35103bea.js"
   ]
 }

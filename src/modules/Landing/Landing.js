@@ -4,13 +4,16 @@ import './styles/Landing.scss';
 
 const landingTitles = [
   "",
-  "IMPACT",
+  "PROVIDING",
+  "IMPACTFUL",
   "SCALABLE",
-  "COMMUNITY"
+  "STEM",
+  "EXPERIENCES",
+  "EVERYONE"
 ]
 const titleSectionMap = [0, 3, 1, 2]
 const landingCaptions= [
-  "We design impactful, scalable STEAM solutions for your community",
+  "Providing impactful, scalable, STEM experiences for everyone",
   "Projects designed to inspire and build skills",
   "Aimed to reach people of all ages and backgrounds",
   "Bringing together and connecting Makers"
@@ -22,6 +25,7 @@ const LandingPage = () => {
   const [landingCaptionIndex, setLandingCaptionIndex] = useState(0);
   const [landingIndex, setLandingIndex] = useState(0);
 
+  // Section Fade-in handler
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
@@ -44,6 +48,7 @@ const LandingPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Landing-loop
   useEffect(() => {
     const timers = [];
     timers[0] = setTimeout(() => {
@@ -124,7 +129,7 @@ const LandingPage = () => {
         </div>
         <div className="fade-section custom-section-4" ref={(el) => (sectionsRef.current[3] = el)}>
           <h2>MAKING NEXT LEVEL PROJECTS</h2>
-          <a className="solid-button" href=""> See more </a>
+          <a className="solid-button" href="#/projects"> See more </a>
           <h3 className="fixed-caption bottom-right">3D printed longhorn bull<br/> with the colors of the American flag</h3>
         </div>
         <div className="fade-section custom-section-5" ref={(el) => (sectionsRef.current[4] = el)}>

@@ -42,7 +42,7 @@
         transform: translateY(40vh) scale(2.5);
       }
       100% {
-        transform: translateY(0) scale(1);
+        transform: translateY(40px) scale(2.5);
       }
     }
     @keyframes headerAnimMobile{

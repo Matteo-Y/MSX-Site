@@ -317,15 +317,43 @@
     transition: opacity 1s ease-in-out;
   }
 
-  &.bg0 .bg0 { opacity: 1; }
-  &.bg1 .bg1 { opacity: 1; }
-  &.bg2 .bg2 { opacity: 1; }
-  &.bg3 .bg3 { opacity: 1; }
+  &.bg10 .bg10 { opacity: 1; }
+  &.bg11 .bg11 { opacity: 1; }
+  &.bg12 .bg12 { opacity: 1; }
+  &.bg20 .bg20 { opacity: 1; }
+  &.bg21 .bg21 { opacity: 1; }
+  &.bg22 .bg22 { opacity: 1; }
+  &.bg30 .bg30 { opacity: 1; }
+  &.bg31 .bg31 { opacity: 1; }
+  &.bg32 .bg32 { opacity: 1; }
+  &.bg40 .bg40 { opacity: 1; }
+  &.bg41 .bg41 { opacity: 1; }
+  &.bg42 .bg42 { opacity: 1; }
+  &.bg50 .bg50 { opacity: 1; }
+  &.bg51 .bg51 { opacity: 1; }
+  &.bg52 .bg52 { opacity: 1; }
+  &.bg60 .bg60 { opacity: 1; }
+  &.bg61 .bg61 { opacity: 1; }
+  &.bg62 .bg62 { opacity: 1; }
 
-  .bg0 { background-image: url("../res/bg-images/landing-images/66.jpg"); }
-  .bg1 { background-image: url("../res/bg-images/landing-images/91.jpg"); }
-  .bg2 { background-image: url("../res/bg-images/landing-images/1.jpg"); }
-  .bg3 { background-image: url("../res/bg-images/landing-images/2.jpg"); }
+  .bg10 { background-image: url("../res/bg-images/landing-images/10.jpg"); }
+  .bg11 { background-image: url("../res/bg-images/landing-images/11.jpg"); }
+  .bg12 { background-image: url("../res/bg-images/landing-images/12.jpg"); }
+  .bg20 { background-image: url("../res/bg-images/landing-images/20.jpg"); }
+  .bg21 { background-image: url("../res/bg-images/landing-images/21.jpg"); }
+  .bg22 { background-image: url("../res/bg-images/landing-images/22.jpeg");}
+  .bg30 { background-image: url("../res/bg-images/landing-images/30.jpg"); }
+  .bg31 { background-image: url("../res/bg-images/landing-images/31.jpg"); }
+  .bg32 { background-image: url("../res/bg-images/landing-images/32.jpg"); }
+  .bg40 { background-image: url("../res/bg-images/landing-images/40.jpg"); }
+  .bg41 { background-image: url("../res/bg-images/landing-images/41.jpg"); }
+  .bg42 { background-image: url("../res/bg-images/landing-images/42.jpg"); }
+  .bg50 { background-image: url("../res/bg-images/landing-images/50.jpg"); }
+  .bg51 { background-image: url("../res/bg-images/landing-images/51.jpg"); }
+  .bg52 { background-image: url("../res/bg-images/landing-images/52.jpeg");}
+  .bg60 { background-image: url("../res/bg-images/landing-images/60.jpg"); }
+  .bg61 { background-image: url("../res/bg-images/landing-images/61.jpg"); }
+  .bg62 { background-image: url("../res/bg-images/landing-images/62.jpg"); }
 
   button {
     background: none;

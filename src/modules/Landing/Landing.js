@@ -5,27 +5,30 @@ import './styles/Landing.scss';
 const landingTitles = [
   "",
   "PROVIDING",
-  "IMPACTFUL",
-  "SCALABLE",
-  "STEM",
+  "IMPACTING",
+  "SCALING",
   "EXPERIENCES",
   "EVERYONE"
 ]
 const titleSectionMap = [0, 3, 1, 2]
 const landingCaptions= [
   "Providing impactful, scalable, STEM experiences for everyone",
-  "Projects designed to inspire and build skills",
-  "Aimed to reach people of all ages and backgrounds",
-  "Bringing together and connecting Makers"
+  "By designing and sharing, meaningful experiences",
+  "And insighting change in people's lives",
+  "With skills, tools, and knowledge made to be shared",
+  "Created to teach practical skills, as well as inspire",
+  "Bringing people together and creating a thriving community"
 ]
+const landingImageIndexes = [10,11,12,20,21,22,30,31,32,40,41,42,50,51,52,60,61,62]
 
 const LandingPage = () => {
   const sectionsRef = useRef([]);
   const [headerAnim, setHeaderAnim] = useState(false);
   const [landingCaptionIndex, setLandingCaptionIndex] = useState(0);
-  const [landingIndex, setLandingIndex] = useState(0);
+  const [landingImageIndex, setLandingImageIndex] = useState(10);
+  const [landingTitleIndex, setLandingTitleIndex] = useState(0);
 
-  // Section Fade-in handler
+  //Section Fade-in handler
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
@@ -53,33 +56,48 @@ const LandingPage = () => {
     const timers = [];
     timers[0] = setTimeout(() => {
       setHeaderAnim(true);
+    }, 7600);
+    timers[1] = setTimeout(() => {
+      setLandingImageIndex(11);
     }, 4000);
+    timers[2] = setTimeout(() => {
+      setLandingImageIndex(12);
+    }, 6000);
 
     const loop = () => {
-      timers[1] = setTimeout(() => {
-        setLandingCaptionIndex(1);
-      }, 4300);
-      timers[2] = setTimeout(() => {
-        setLandingIndex(1);
-      }, 5000);
-      timers[3] = setTimeout(() => {
-        setLandingCaptionIndex(2);
-      }, 11000);
-      timers[4] = setTimeout(() => {
-        setLandingIndex(2);
-      }, 12000);
-      timers[5] = setTimeout(() => {
-        setLandingCaptionIndex(3);
-      }, 17000);
-      timers[6] = setTimeout(() => {
-        setLandingIndex(3);
-      }, 18000);
-    }
+      const delays = [7700, 12700, 17700, 22700, 27700];
+      const titleDelays = [8000, 13000, 18000, 23000, 28000];
+      const imageBaseIndex = [20, 30, 40, 50, 60];
+      let imageDelayOffset = 2000;
+    
+      for (let i = 1; i <= 5; i++) {
+        const captionDelay = delays[i - 1];
+        const titleDelay = titleDelays[i - 1];
+        const baseImageIndex = imageBaseIndex[i - 1];
+    
+        timers[i * 4 - 1] = setTimeout(() => {
+          setLandingCaptionIndex(i);
+        }, captionDelay);
+    
+        timers[i * 4] = setTimeout(() => {
+          setLandingTitleIndex(i);
+          setLandingImageIndex(baseImageIndex);
+        }, titleDelay);
+    
+        timers[i * 4 + 1] = setTimeout(() => {
+          setLandingImageIndex(baseImageIndex + 1);
+        }, titleDelay + imageDelayOffset);
+    
+        timers[i * 4 + 2] = setTimeout(() => {
+          setLandingImageIndex(baseImageIndex + 2);
+        }, titleDelay + imageDelayOffset * 2);
+      }
+    };
 
     loop();
     const loopInterval = setInterval(() => {
       loop();
-    }, 22000);
+    }, 32000);
 
     
     
@@ -106,13 +124,12 @@ const LandingPage = () => {
         <h1 className={headerAnim ? "animated" : ""} onClick={() => scrollToSection(0)}>SUBOTIX</h1>
       </header>
       <section className="content">
-        <div className={"fade-section custom-section-1 visible bg" + landingIndex} ref={(el) => (sectionsRef.current[0] = el)}>
-          <div className="background-image bg0"></div>
-          <div className="background-image bg1"></div>
-          <div className="background-image bg2"></div>
-          <div className="background-image bg3"></div>
-          <button className="underline-anim" onClick={() => scrollToSection(titleSectionMap[landingIndex])}>{landingTitles[landingIndex]}</button>
-          <div className="landing-captions"><TypingEffect words={landingCaptions} index={landingCaptionIndex} typeSpeed={50} delSpeed={20}/></div>
+        <div className={"fade-section custom-section-1 visible bg" + landingImageIndex} ref={(el) => (sectionsRef.current[0] = el)}>
+          {landingImageIndexes.map((index) => (
+            <div key={index} className={"background-image bg" + index} />
+          ))}
+          <button className="underline-anim">{landingTitles[landingTitleIndex]}</button>
+          <div className="landing-captions"><TypingEffect words={landingCaptions} index={landingCaptionIndex} typeSpeed={30} delSpeed={20}/></div>
         </div>
         <div className="fade-section custom-section-2" ref={(el) => (sectionsRef.current[1] = el)}>
           <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -80px 90px black', zIndex: '2'}}/>

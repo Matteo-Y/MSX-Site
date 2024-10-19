@@ -65,10 +65,10 @@ const LandingPage = () => {
     }, 6000);
 
     const loop = () => {
-      const delays = [7700, 12700, 17700, 22700, 27700];
-      const titleDelays = [8000, 13000, 18000, 23000, 28000];
+      const delays = [7700, 15700, 23700, 31700, 39700];
+      const titleDelays = [8000, 16000, 24000, 32000, 40000];
       const imageBaseIndex = [20, 30, 40, 50, 60];
-      let imageDelayOffset = 2000;
+      let imageDelayOffset = 3000;
     
       for (let i = 1; i <= 5; i++) {
         const captionDelay = delays[i - 1];
@@ -97,7 +97,7 @@ const LandingPage = () => {
     loop();
     const loopInterval = setInterval(() => {
       loop();
-    }, 32000);
+    }, 40000);
 
     
     

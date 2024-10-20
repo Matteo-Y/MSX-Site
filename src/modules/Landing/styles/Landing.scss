@@ -17,12 +17,18 @@
     h1 {
       user-select: none;
       font-family: "aerospace";
-      font-size: 4rem;
+      font-size: 200px;
       margin: 0;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       cursor: pointer;
-      transform: translateY(40vh) scale(2.5);
+      transform: translateY(40vh);
       &.animated {animation: headerAnim 1s forwards;}
+    }
+    @media (max-width: 1300px) {
+      h1 {
+        font-size: 100px;
+        transform: translateY(40vh);
+      }
     }
     @media (max-width: 550px) {
       h1 {
@@ -33,16 +39,16 @@
     }
     @media (max-height: 400px) {
       h1 {
-        font-size: 3rem;
+        font-size: 80px;
       }
     }
 
     @keyframes headerAnim{
       0% {
-        transform: translateY(40vh) scale(2.5);
+        transform: translateY(40vh);
       }
       100% {
-        transform: translateY(40px) scale(2.5);
+        transform: translateY(20px);
       }
     }
     @keyframes headerAnimMobile{
@@ -371,26 +377,24 @@
       position: fixed;
       top:200px;
       font-size: 120px !important;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
   }
   @media (max-width: 800px) {
     button {
       top:200px;
       font-size: 80px !important;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+  }
+  @media (max-height: 500px) {
+    button {
+      top: 130px !important;
+      font-size: 100px !important;
     }
   }
   @media (max-width: 500px) {
     button {
       top:230px;
       font-size: 55px !important;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-  }
-  @media (max-height: 500px) {
-    button {
-      top: 100px !important;
     }
   }
 

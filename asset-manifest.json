@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.88b51e44.css",
-    "main.js": "/static/js/main.1333779a.js",
+    "main.css": "/static/css/main.ab8b18c1.css",
+    "main.js": "/static/js/main.e59e33b9.js",
     "static/media/Sawy-commercial-edit-1.mp4": "/static/media/Sawy-commercial-edit-1.18125013c3b76ca838a6.mp4",
     "static/media/60.jpg": "/static/media/60.9859ad8779c005b5108e.jpg",
     "static/media/50.jpg": "/static/media/50.7061c91652fc4a8a1af1.jpg",
@@ -31,11 +31,11 @@
     "static/media/40.jpg": "/static/media/40.d5fd9ab51e21cfc91619.jpg",
     "static/media/Aerospace.ttf": "/static/media/Aerospace.0342d6f9ff59f84eda4b.ttf",
     "index.html": "/index.html",
-    "main.88b51e44.css.map": "/static/css/main.88b51e44.css.map",
-    "main.1333779a.js.map": "/static/js/main.1333779a.js.map"
+    "main.ab8b18c1.css.map": "/static/css/main.ab8b18c1.css.map",
+    "main.e59e33b9.js.map": "/static/js/main.e59e33b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.88b51e44.css",
-    "static/js/main.1333779a.js"
+    "static/css/main.ab8b18c1.css",
+    "static/js/main.e59e33b9.js"
   ]
 }

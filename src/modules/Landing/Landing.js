@@ -12,7 +12,7 @@ const landingTitles = [
 ]
 const titleSectionMap = [0, 3, 1, 2]
 const landingCaptions= [
-  "Providing impactful, scalable, STEM experiences for everyone",
+  "Providing impactful, STEM experiences for everyone",
   "By designing and sharing, meaningful experiences",
   "And insighting change in people's lives",
   "With skills, tools, and knowledge made to be shared",
@@ -125,6 +125,7 @@ const LandingPage = () => {
       </header>
       <section className="content">
         <div className={"fade-section custom-section-1 visible bg" + landingImageIndex} ref={(el) => (sectionsRef.current[0] = el)}>
+        <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -80px 90px black', zIndex: '2'}}/>
           {landingImageIndexes.map((index) => (
             <div key={index} className={"background-image bg" + index} />
           ))}

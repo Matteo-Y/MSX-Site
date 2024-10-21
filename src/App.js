@@ -3,6 +3,7 @@ import './App.css';
 import Landing from './modules/Landing/Landing.js'
 import Projects from './modules/Projects/Projects.js';
 import ScrollToTop from './modules/Tools/ScrollToTop.js'
+import PrivacyPolicy from './modules/PrivacyPolicy/PrivacyPolicy.js';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path={"/"} element={<Landing/>}/>
           <Route path={"/projects"} element={<Projects/>}/>
+          <Route path={"/privacy"} element={<PrivacyPolicy/>}/>
         </Routes>
       </HashRouter>
     </div>

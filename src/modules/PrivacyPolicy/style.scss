@@ -1,0 +1,14 @@
+.privacy-policy-page {
+    margin: 0;
+    padding: 30px;
+    background-color: white;
+
+    h1 {
+        text-align: center;
+    }
+
+    .text-body {
+        margin: auto;
+        width: clamp(400px, 70vw, 800px);
+    }
+}

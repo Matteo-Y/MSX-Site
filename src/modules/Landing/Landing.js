@@ -52,62 +52,74 @@ const LandingPage = () => {
   }, []);
 
   // Landing-loop
-  useEffect(() => {
-    const timers = [];
-    timers[0] = setTimeout(() => {
-      setHeaderAnim(true);
-    }, 7600);
-    timers[1] = setTimeout(() => {
-      setLandingImageIndex(11);
-    }, 4000);
-    timers[2] = setTimeout(() => {
-      setLandingImageIndex(12);
-    }, 6000);
+  const [currentPhaseIndex, setCurrentPhaseIndex] = useState(0);
+  const timers = useRef([]);
+  const intervalRef = useRef(null); // Ref to store the loop interval
+  const phases = [
+    { captionIndex: 1, titleIndex: 1, imageBaseIndex: 20, startDelay: 7700 },
+    { captionIndex: 2, titleIndex: 2, imageBaseIndex: 30, startDelay: 15700 },
+    { captionIndex: 3, titleIndex: 3, imageBaseIndex: 40, startDelay: 23700 },
+    { captionIndex: 4, titleIndex: 4, imageBaseIndex: 50, startDelay: 31700 },
+    { captionIndex: 5, titleIndex: 5, imageBaseIndex: 60, startDelay: 39700 },
+  ];
+  const loopIntervalDelay = phases[phases.length - 1].startDelay + 300;
 
-    const loop = () => {
-      const delays = [7700, 15700, 23700, 31700, 39700];
-      const titleDelays = [8000, 16000, 24000, 32000, 40000];
-      const imageBaseIndex = [20, 30, 40, 50, 60];
-      let imageDelayOffset = 3000;
-    
-      for (let i = 1; i <= 5; i++) {
-        const captionDelay = delays[i - 1];
-        const titleDelay = titleDelays[i - 1];
-        const baseImageIndex = imageBaseIndex[i - 1];
-    
-        timers[i * 4 - 1] = setTimeout(() => {
-          setLandingCaptionIndex(i);
-        }, captionDelay);
-    
-        timers[i * 4] = setTimeout(() => {
-          setLandingTitleIndex(i);
-          setLandingImageIndex(baseImageIndex);
-        }, titleDelay);
-    
-        timers[i * 4 + 1] = setTimeout(() => {
-          setLandingImageIndex(baseImageIndex + 1);
-        }, titleDelay + imageDelayOffset);
-    
-        timers[i * 4 + 2] = setTimeout(() => {
-          setLandingImageIndex(baseImageIndex + 2);
-        }, titleDelay + imageDelayOffset * 2);
-      }
-    };
+  const applyPhase = (phase, manual = false) => {
+    const { captionIndex, titleIndex, imageBaseIndex, startDelay } = phase;
+    const imageDelayOffset = 3000;
+  
+    // Immediate application if manual is true, else apply delay
+    const baseDelay = manual ? 0 : startDelay;
+  
+    timers.current.push(
+      setTimeout(() => setLandingCaptionIndex(captionIndex), baseDelay),
+      setTimeout(() => setLandingTitleIndex(titleIndex), baseDelay + 300),
+      setTimeout(() => setLandingImageIndex(imageBaseIndex), baseDelay + 600),
+      setTimeout(() => setLandingImageIndex(imageBaseIndex + 1), baseDelay + imageDelayOffset),
+      setTimeout(() => setLandingImageIndex(imageBaseIndex + 2), baseDelay + imageDelayOffset * 2)
+    );
+  };
+  
 
-    loop();
-    const loopInterval = setInterval(() => {
-      loop();
-    }, 40000);
-
-    
-    
-    return () => {
-      for(let i = 0; i < timers.length; i++) {
-        clearTimeout(timers[i]);
-      }
-      clearInterval(loopInterval);
+  const startLoop = () => {
+    for (let i = currentPhaseIndex; i < phases.length; i++) {
+      applyPhase(phases[i]);
     }
+    setCurrentPhaseIndex(0); // Reset after completing the loop
+  };
+  
+
+  const startIntervalLoop = () => {
+    intervalRef.current = setInterval(startLoop, loopIntervalDelay);
+  };
+
+  useEffect(() => {
+    setTimeout(() => setHeaderAnim(true), 7600);
+    setTimeout(() => setLandingImageIndex(11), 4000);
+    setTimeout(() => setLandingImageIndex(12), 6000);
+
+    startLoop();
+    startIntervalLoop(); // Start the repeating loop
+
+    return () => {
+      timers.current.forEach(clearTimeout);
+      clearInterval(intervalRef.current);
+    };
   }, []);
+
+  const handleManualPhaseChange = (index) => {
+    // Clear active timers and interval
+    timers.current.forEach(clearTimeout);
+    clearInterval(intervalRef.current);
+  
+    // Update current phase index and apply selected phase
+    setCurrentPhaseIndex(index);
+    applyPhase(phases[index], true);
+  
+    // Restart loop starting from the next phase
+    intervalRef.current = setInterval(() => startLoop(), loopIntervalDelay);
+  };
+  
 
   const scrollToSection = (index) => {
     const section = sectionsRef.current[index];
@@ -129,7 +141,7 @@ const LandingPage = () => {
           {landingImageIndexes.map((index) => (
             <div key={index} className={"background-image bg" + index} />
           ))}
-          <button className="underline-anim">{landingTitles[landingTitleIndex]}</button>
+          <button key={landingTitleIndex} className="underline-anim pop-up-anim">{landingTitles[landingTitleIndex]}</button>
           <div className="landing-captions"><TypingEffect words={landingCaptions} index={landingCaptionIndex} typeSpeed={30} delSpeed={20}/></div>
         </div>
         <div className="fade-section custom-section-2" ref={(el) => (sectionsRef.current[1] = el)}>

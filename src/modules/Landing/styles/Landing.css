@@ -494,4 +494,21 @@
   .custom-section-1 .landing-captions p {
     top: 200px;
   }
+}
+
+.pop-up-anim {
+  transform: translateY(50px);
+  opacity: 0.2;
+  animation: pop-up-fade 1s ease-in-out forwards;
+}
+
+@keyframes pop-up-fade {
+  0% {
+    transform: translateY(50px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=Landing.css.map */

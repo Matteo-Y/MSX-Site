@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.eaa55e0d.css",
-    "main.js": "/static/js/main.6cc73897.js",
-    "static/media/Sawy-commercial-edit-1.mp4": "/static/media/Sawy-commercial-edit-1.18125013c3b76ca838a6.mp4",
+    "main.css": "/static/css/main.c686eda8.css",
+    "main.js": "/static/js/main.8ebb12ca.js",
     "static/media/60.jpg": "/static/media/60.9859ad8779c005b5108e.jpg",
     "static/media/50.jpg": "/static/media/50.7061c91652fc4a8a1af1.jpg",
     "static/media/42.jpg": "/static/media/42.6679478eaa321f119577.jpg",
@@ -13,29 +12,25 @@
     "static/media/61.jpg": "/static/media/61.f30783c4e6db7f9369b7.jpg",
     "static/media/10.jpg": "/static/media/10.1e3e90605f793c211dfb.jpg",
     "static/media/12.jpg": "/static/media/12.68ee4da130d2815b8f07.jpg",
-    "static/media/24.jpg": "/static/media/24.68ee4da130d2815b8f07.jpg",
     "static/media/20.jpg": "/static/media/20.7c4a739d535a0c196edd.jpg",
     "static/media/66.jpg": "/static/media/66.e1cbc1cbf665fd81b63d.jpg",
     "static/media/21.jpg": "/static/media/21.2360330b2b190add17ea.jpg",
     "static/media/30.jpg": "/static/media/30.0ee679c8abe99133d411.jpg",
-    "static/media/3.jpg": "/static/media/3.01d9dd83c3518ab03b24.jpg",
     "static/media/11.jpg": "/static/media/11.e6bec29b6d38eacdd22c.jpg",
     "static/media/5.5.jpg": "/static/media/5.5.71ee3da2134b124f4e6a.jpg",
     "static/media/52.jpeg": "/static/media/52.ae3664b7fadb57474ad6.jpeg",
     "static/media/5.jpg": "/static/media/5.878e623fb1e95d5c621e.jpg",
     "static/media/22.jpeg": "/static/media/22.e924dbe8b7efe737760c.jpeg",
     "static/media/51.jpg": "/static/media/51.7c47682c0c8427fd593a.jpg",
-    "static/media/73.jpg": "/static/media/73.0c6e1f56f9f2b489b1a4.jpg",
     "static/media/31.jpg": "/static/media/31.af7ea1b5ed45452687c0.jpg",
-    "static/media/4.jpg": "/static/media/4.af7ea1b5ed45452687c0.jpg",
     "static/media/40.jpg": "/static/media/40.d5fd9ab51e21cfc91619.jpg",
     "static/media/Aerospace.ttf": "/static/media/Aerospace.0342d6f9ff59f84eda4b.ttf",
     "index.html": "/index.html",
-    "main.eaa55e0d.css.map": "/static/css/main.eaa55e0d.css.map",
-    "main.6cc73897.js.map": "/static/js/main.6cc73897.js.map"
+    "main.c686eda8.css.map": "/static/css/main.c686eda8.css.map",
+    "main.8ebb12ca.js.map": "/static/js/main.8ebb12ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.eaa55e0d.css",
-    "static/js/main.6cc73897.js"
+    "static/css/main.c686eda8.css",
+    "static/js/main.8ebb12ca.js"
   ]
 }

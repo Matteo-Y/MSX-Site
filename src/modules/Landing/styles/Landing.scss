@@ -63,7 +63,7 @@
   }
 
   .content {
-    height: 600vh;
+    height: 200vh;
     position: relative;
   }
 
@@ -177,19 +177,6 @@
     }
   }
 
-  .custom-section-2 {
-    background-color: black;
-  }
-
-  .custom-section-3 {
-    background-image: url("../res/bg-images/3.jpg");
-  }
-  @media (max-width: 600px) {
-    .custom-section-3 {
-      background-image: url("../res/bg-images/73.jpg");
-    }
-  }
-
   .custom-section-4 {
     background-image: url("../res/bg-images/5.jpg");
   }
@@ -197,15 +184,6 @@
     .custom-section-4 {
       background-image: url("../res/bg-images/5.5.jpg");
     }
-  }
-
-  .custom-section-5 {
-    background-position: left;
-    background-image: url("../res/bg-images/4.jpg");
-  }
-  
-  .custom-section-6 {
-    background-image: url("../res/bg-images/24.jpg");
   }
 }
 

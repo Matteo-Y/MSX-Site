@@ -113,7 +113,6 @@ const LandingPage = () => {
     <div className="landing-page">
       <header className="sticky-header">
         <h1 className={headerAnim ? "animated" : ""} onClick={() => scrollToSection(0)}>SUBOTIX</h1>
-        <button onClick={() => setStep(22)} style={{position: "absolute", left: "0"}}>thing</button>
       </header>
       <section className="content">
         <div className={"fade-section custom-section-1 visible bg" + landingImageIndex} ref={(el) => (sectionsRef.current[0] = el)}>
@@ -124,34 +123,10 @@ const LandingPage = () => {
           <button key={landingTitleIndex} className="underline-anim pop-up-anim">{landingTitles[landingTitleIndex]}</button>
           <div className="landing-captions"><TypingEffect words={landingCaptions} index={landingCaptionIndex} typeSpeed={30} delSpeed={20}/></div>
         </div>
-        <div className="fade-section custom-section-2" ref={(el) => (sectionsRef.current[1] = el)}>
-          <div style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', boxShadow: 'inset 0 -80px 90px black', zIndex: '2'}}/>
-          <video className="background-video" src={require("./res/videos/Sawy-commercial-edit-1.mp4")} type="video/mp4" autoPlay loop muted />
-          <h2>SCALABLE SOLUTIONS</h2>
-          <div className="text-box">
-            <p>Implementing and spreading STEAM experiences designed to inspire.</p>
-            <button onClick={() => scrollToSection(4)}> Learn more </button>
-          </div>
-        </div>
-        <div className="fade-section custom-section-3" ref={(el) => (sectionsRef.current[2] = el)}>
-          <h2 style={{fontSize: "5rem"}}>S3</h2>
-          <h3 className="fixed-caption bottom-left">Sawy the camel</h3>
-        </div>
-        <div className="fade-section custom-section-4" ref={(el) => (sectionsRef.current[3] = el)}>
+        <div className="fade-section custom-section-4" ref={(el) => (sectionsRef.current[1] = el)}>
           <h2>MAKING NEXT LEVEL PROJECTS</h2>
           <a className="solid-button" href="#/projects"> See more </a>
           <h3 className="fixed-caption bottom-right">3D printed longhorn bull<br/> with the colors of the American flag</h3>
-        </div>
-        <div className="fade-section custom-section-5" ref={(el) => (sectionsRef.current[4] = el)}>
-          <h2>SAWY-SAWY</h2>
-          <div className="text-box">
-            <p>Providing a high impact, scalable solution to STEAM education.</p>
-            <button onClick={() => {}}> Kits </button>
-            <button onClick={() => {}}> Programs </button>
-          </div>
-        </div>
-        <div className="fade-section custom-section-6" ref={(el) => (sectionsRef.current[5] = el)}>
-          <h2>MSX</h2>
         </div>
       </section>
     </div>

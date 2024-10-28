@@ -66,7 +66,7 @@
   }
 }
 .landing-page .content {
-  height: 600vh;
+  height: 200vh;
   position: relative;
 }
 .landing-page .fade-section {
@@ -174,17 +174,6 @@
     font-size: 1rem;
   }
 }
-.landing-page .custom-section-2 {
-  background-color: black;
-}
-.landing-page .custom-section-3 {
-  background-image: url("../res/bg-images/3.jpg");
-}
-@media (max-width: 600px) {
-  .landing-page .custom-section-3 {
-    background-image: url("../res/bg-images/73.jpg");
-  }
-}
 .landing-page .custom-section-4 {
   background-image: url("../res/bg-images/5.jpg");
 }
@@ -192,13 +181,6 @@
   .landing-page .custom-section-4 {
     background-image: url("../res/bg-images/5.5.jpg");
   }
-}
-.landing-page .custom-section-5 {
-  background-position: left;
-  background-image: url("../res/bg-images/4.jpg");
-}
-.landing-page .custom-section-6 {
-  background-image: url("../res/bg-images/24.jpg");
 }
 
 .fixed-caption {

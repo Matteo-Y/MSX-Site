@@ -10,7 +10,6 @@ const landingTitles = [
   "EXPERIENCES",
   "EVERYONE"
 ]
-const titleSectionMap = [0, 3, 1, 2]
 const landingCaptions= [
   "Providing impactful, STEM experiences for everyone",
   "By designing and sharing, meaningful experiences",
@@ -23,12 +22,62 @@ const landingImageIndexes = [10,11,12,20,21,22,30,31,32,40,41,42,50,51,52,60,61,
 
 const LandingPage = () => {
   const sectionsRef = useRef([]);
+  const [step, setStep] = useState(0);
   const [headerAnim, setHeaderAnim] = useState(false);
   const [landingCaptionIndex, setLandingCaptionIndex] = useState(0);
   const [landingImageIndex, setLandingImageIndex] = useState(10);
   const [landingTitleIndex, setLandingTitleIndex] = useState(0);
 
-  //Section Fade-in handler
+  useEffect(() => {
+    const stepIntervalMs = 500;
+    const incrementStep = (currentStep) => currentStep < 1000000 ? currentStep + 1 : 0;
+    const interval = setInterval(() => {setStep((step) => incrementStep(step))}, stepIntervalMs)
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const introLength = 12;
+    if(step == 4)  setLandingImageIndex(11);
+    if(step == 8)  setLandingImageIndex(12);
+    if(step == 11) setLandingCaptionIndex(1);
+    if(step > 10) setHeaderAnim(true);
+
+    const totalStepCount = 60;
+    const currentStep = (step - introLength) % totalStepCount;
+    if(step > introLength) {
+      if(currentStep == 0) setLandingCaptionIndex(1);
+      if(currentStep == 1) setLandingTitleIndex(1);
+      if(currentStep == 1) setLandingImageIndex(20);
+      if(currentStep == 4) setLandingImageIndex(21);
+      if(currentStep == 8) setLandingImageIndex(22);
+      //
+      if(currentStep == 10) setLandingCaptionIndex(2);
+      if(currentStep == 12) setLandingTitleIndex(2);
+      if(currentStep == 12) setLandingImageIndex(30);
+      if(currentStep == 16) setLandingImageIndex(31);
+      if(currentStep == 20) setLandingImageIndex(32);
+      //
+      if(currentStep == 22) setLandingCaptionIndex(3);
+      if(currentStep == 24) setLandingTitleIndex(3);
+      if(currentStep == 24) setLandingImageIndex(40);
+      if(currentStep == 28) setLandingImageIndex(41);
+      if(currentStep == 32) setLandingImageIndex(42);
+      //
+      if(currentStep == 34) setLandingCaptionIndex(4);
+      if(currentStep == 36) setLandingTitleIndex(4);
+      if(currentStep == 36) setLandingImageIndex(50);
+      if(currentStep == 40) setLandingImageIndex(51);
+      if(currentStep == 44) setLandingImageIndex(52);
+      //
+      if(currentStep == 46) setLandingCaptionIndex(5);
+      if(currentStep == 48) setLandingTitleIndex(5);
+      if(currentStep == 48) setLandingImageIndex(60);
+      if(currentStep == 52) setLandingImageIndex(61);
+      if(currentStep == 56) setLandingImageIndex(62);
+    }
+    
+  }, [step]);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
@@ -51,76 +100,6 @@ const LandingPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Landing-loop
-  const [currentPhaseIndex, setCurrentPhaseIndex] = useState(0);
-  const timers = useRef([]);
-  const intervalRef = useRef(null); // Ref to store the loop interval
-  const phases = [
-    { captionIndex: 1, titleIndex: 1, imageBaseIndex: 20, startDelay: 7700 },
-    { captionIndex: 2, titleIndex: 2, imageBaseIndex: 30, startDelay: 15700 },
-    { captionIndex: 3, titleIndex: 3, imageBaseIndex: 40, startDelay: 23700 },
-    { captionIndex: 4, titleIndex: 4, imageBaseIndex: 50, startDelay: 31700 },
-    { captionIndex: 5, titleIndex: 5, imageBaseIndex: 60, startDelay: 39700 },
-  ];
-  const loopIntervalDelay = phases[phases.length - 1].startDelay + 300;
-
-  const applyPhase = (phase, manual = false) => {
-    const { captionIndex, titleIndex, imageBaseIndex, startDelay } = phase;
-    const imageDelayOffset = 3000;
-  
-    // Immediate application if manual is true, else apply delay
-    const baseDelay = manual ? 0 : startDelay;
-  
-    timers.current.push(
-      setTimeout(() => setLandingCaptionIndex(captionIndex), baseDelay),
-      setTimeout(() => setLandingTitleIndex(titleIndex), baseDelay + 300),
-      setTimeout(() => setLandingImageIndex(imageBaseIndex), baseDelay + 600),
-      setTimeout(() => setLandingImageIndex(imageBaseIndex + 1), baseDelay + imageDelayOffset),
-      setTimeout(() => setLandingImageIndex(imageBaseIndex + 2), baseDelay + imageDelayOffset * 2)
-    );
-  };
-  
-
-  const startLoop = () => {
-    for (let i = currentPhaseIndex; i < phases.length; i++) {
-      applyPhase(phases[i]);
-    }
-    setCurrentPhaseIndex(0); // Reset after completing the loop
-  };
-  
-
-  const startIntervalLoop = () => {
-    intervalRef.current = setInterval(startLoop, loopIntervalDelay);
-  };
-
-  useEffect(() => {
-    setTimeout(() => setHeaderAnim(true), 7600);
-    setTimeout(() => setLandingImageIndex(11), 4000);
-    setTimeout(() => setLandingImageIndex(12), 6000);
-
-    startLoop();
-    startIntervalLoop(); // Start the repeating loop
-
-    return () => {
-      timers.current.forEach(clearTimeout);
-      clearInterval(intervalRef.current);
-    };
-  }, []);
-
-  const handleManualPhaseChange = (index) => {
-    // Clear active timers and interval
-    timers.current.forEach(clearTimeout);
-    clearInterval(intervalRef.current);
-  
-    // Update current phase index and apply selected phase
-    setCurrentPhaseIndex(index);
-    applyPhase(phases[index], true);
-  
-    // Restart loop starting from the next phase
-    intervalRef.current = setInterval(() => startLoop(), loopIntervalDelay);
-  };
-  
-
   const scrollToSection = (index) => {
     const section = sectionsRef.current[index];
     if (section) {
@@ -134,6 +113,7 @@ const LandingPage = () => {
     <div className="landing-page">
       <header className="sticky-header">
         <h1 className={headerAnim ? "animated" : ""} onClick={() => scrollToSection(0)}>SUBOTIX</h1>
+        <button onClick={() => setStep(22)} style={{position: "absolute", left: "0"}}>thing</button>
       </header>
       <section className="content">
         <div className={"fade-section custom-section-1 visible bg" + landingImageIndex} ref={(el) => (sectionsRef.current[0] = el)}>

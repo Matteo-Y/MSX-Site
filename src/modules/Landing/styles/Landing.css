@@ -1,9 +1,4 @@
-.landing-page {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-.landing-page .sticky-header {
+.sticky-header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -14,7 +9,7 @@
   z-index: 1000;
   box-shadow: none;
 }
-.landing-page .sticky-header h1 {
+.sticky-header h1 {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -26,26 +21,26 @@
   transform: translateY(40vh);
   transition: transform 0.5s;
 }
-.landing-page .sticky-header h1.animated {
+.sticky-header h1.animated {
   animation: headerAnim 1s forwards;
 }
 @media (max-width: 1300px) {
-  .landing-page .sticky-header h1 {
+  .sticky-header h1 {
     font-size: 100px;
     transform: translateY(40vh);
   }
 }
 @media (max-width: 550px) {
-  .landing-page .sticky-header h1 {
+  .sticky-header h1 {
     font-size: 65px;
     transform: translateY(40vh);
   }
-  .landing-page .sticky-header h1.animated {
+  .sticky-header h1.animated {
     animation: headerAnimMobile 1s forwards;
   }
 }
 @media (max-height: 400px) {
-  .landing-page .sticky-header h1 {
+  .sticky-header h1 {
     font-size: 80px;
   }
 }
@@ -64,6 +59,12 @@
   100% {
     transform: translateY(0);
   }
+}
+
+.landing-page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 .landing-page .content {
   height: 200vh;
@@ -245,18 +246,19 @@
 .underline-anim {
   position: relative;
   overflow: hidden;
+  z-index: 5;
 }
 .underline-anim::after {
   content: "";
   position: absolute;
-  bottom: 7px;
+  bottom: 20px;
   left: 0;
   width: 100%;
-  height: 4px;
+  height: 2px;
   background-color: white;
   transition: opacity 1s, transform 300ms;
   opacity: 1;
-  transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-110%, 0, 0);
 }
 .underline-anim:hover::after, .underline-anim :focus::after {
   transform: translate3d(0, 0, 0);
@@ -401,7 +403,7 @@
 .custom-section-1 .bg62 {
   background-image: url("../res/bg-images/landing-images/62.jpg");
 }
-.custom-section-1 button {
+.custom-section-1 h3 {
   background: none;
   border: none;
   color: white;
@@ -413,26 +415,26 @@
   margin: 0;
 }
 @media (max-width: 1300px) {
-  .custom-section-1 button {
+  .custom-section-1 h3 {
     position: fixed;
     top: 200px;
     font-size: 120px !important;
   }
 }
 @media (max-width: 800px) {
-  .custom-section-1 button {
+  .custom-section-1 h3 {
     top: 200px;
     font-size: 80px !important;
   }
 }
 @media (max-height: 500px) {
-  .custom-section-1 button {
+  .custom-section-1 h3 {
     top: 130px !important;
     font-size: 100px !important;
   }
 }
 @media (max-width: 500px) {
-  .custom-section-1 button {
+  .custom-section-1 h3 {
     top: 230px;
     font-size: 55px !important;
   }
@@ -479,19 +481,49 @@
   }
 }
 
+.landing-nav {
+  position: fixed;
+  bottom: 30px;
+  z-index: 3;
+  width: 1000px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.landing-nav p {
+  font-size: 30px;
+  color: white;
+}
+.landing-nav .nav-button {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .landing-nav {
+    display: none;
+  }
+}
+@media (max-height: 750px) {
+  .landing-nav {
+    display: none;
+  }
+}
 .pop-up-anim {
-  transform: translateY(50px);
   opacity: 0.2;
-  animation: pop-up-fade 1s ease-in-out forwards;
+  animation: pop-up-fade 1s reverse ease-in-out forwards;
 }
 
 @keyframes pop-up-fade {
   0% {
-    transform: translateY(50px);
-    opacity: 0.2;
-  }
-  100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0.2;
   }
 }/*# sourceMappingURL=Landing.css.map */

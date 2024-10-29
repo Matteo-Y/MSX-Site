@@ -120,8 +120,16 @@ const LandingPage = () => {
           {landingImageIndexes.map((index) => (
             <div key={index} className={"background-image bg" + index} />
           ))}
-          <button key={landingTitleIndex} className="underline-anim pop-up-anim">{landingTitles[landingTitleIndex]}</button>
+          <h3 key={landingTitleIndex} className="pop-up-anim">{landingTitles[landingTitleIndex]}</h3>
           <div className="landing-captions"><TypingEffect words={landingCaptions} index={landingCaptionIndex} typeSpeed={30} delSpeed={20}/></div>
+          <div className="landing-nav">
+            <button className="underline-anim nav-button" onClick={() => setStep(12)}>PROVIDING</button>
+            <button className="underline-anim nav-button" onClick={() => setStep(22)}>IMPACTING</button>
+            <button className="underline-anim nav-button" onClick={() => setStep(34)}>SCALING</button>
+            <button className="underline-anim nav-button" onClick={() => setStep(46)}>EXPERIENCES</button>
+            <p>FOR</p>
+            <button className="underline-anim nav-button" onClick={() => setStep(58)}>EVERYONE</button>
+          </div>
         </div>
         <div className="fade-section custom-section-4" ref={(el) => (sectionsRef.current[1] = el)}>
           <h2>MAKING NEXT LEVEL PROJECTS</h2>

@@ -120,7 +120,7 @@ const LandingPage = () => {
           {landingImageIndexes.map((index) => (
             <div key={index} className={"background-image bg" + index} />
           ))}
-          <h3 key={landingTitleIndex} className="pop-up-anim">{landingTitles[landingTitleIndex]}</h3>
+          <h3 key={landingTitleIndex} className="">{landingTitles[landingTitleIndex]}</h3>
           <div className="landing-captions"><TypingEffect words={landingCaptions} index={landingCaptionIndex} typeSpeed={30} delSpeed={20}/></div>
           <div className="landing-nav">
             <button className="underline-anim nav-button" onClick={() => setStep(12)}>PROVIDING</button>

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.eaa55e0d.css",
-    "main.js": "/static/js/main.10461a55.js",
+    "main.js": "/static/js/main.b188ca57.js",
     "static/media/Sawy-commercial-edit-1.mp4": "/static/media/Sawy-commercial-edit-1.18125013c3b76ca838a6.mp4",
     "static/media/60.jpg": "/static/media/60.9859ad8779c005b5108e.jpg",
     "static/media/finger_robot.zip": "/static/media/finger_robot.051363f5a0cd50bbb0b6.zip",
@@ -35,10 +35,10 @@
     "static/media/default_firmware.zip": "/static/media/default_firmware.5137837e7eb9e172b0a2.zip",
     "index.html": "/index.html",
     "main.eaa55e0d.css.map": "/static/css/main.eaa55e0d.css.map",
-    "main.10461a55.js.map": "/static/js/main.10461a55.js.map"
+    "main.b188ca57.js.map": "/static/js/main.b188ca57.js.map"
   },
   "entrypoints": [
     "static/css/main.eaa55e0d.css",
-    "static/js/main.10461a55.js"
+    "static/js/main.b188ca57.js"
   ]
 }

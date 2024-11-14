@@ -1,0 +1,2 @@
+src/modules/Downloads/res/files/arduinodroid-6-3-1.apk filter=lfs diff=lfs merge=lfs -text
+*.apk filter=lfs diff=lfs merge=lfs -text

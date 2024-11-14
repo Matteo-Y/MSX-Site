@@ -1,0 +1,64 @@
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: none;
+    
+    h1 {
+      user-select: none;
+      font-family: "aerospace";
+      font-size: 200px;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+      transform: translateY(40vh);
+      transition: transform 0.5s;
+      &.animated {animation: headerAnim 1s forwards;}
+    }
+    @media (max-width: 1300px) {
+      h1 {
+        font-size: 100px;
+        transform: translateY(40vh);
+      }
+    }
+    @media (max-height: 800px) {
+      h1 {
+        font-size: 100px;
+        transform: translateY(40vh);
+      }
+    }
+    @media (max-width: 550px) {
+      h1 {
+        font-size: 65px;
+        transform: translateY(40vh);
+        &.animated {animation: headerAnimMobile 1s forwards;}
+      }
+    }
+    @media (max-height: 400px) {
+      h1 {
+        font-size: 80px;
+      }
+    }
+
+    @keyframes headerAnim{
+      0% {
+        transform: translateY(40vh);
+      }
+      100% {
+        transform: translateY(20px);
+      }
+    }
+    @keyframes headerAnimMobile{
+      0% {
+        transform: translateY(40vh);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }

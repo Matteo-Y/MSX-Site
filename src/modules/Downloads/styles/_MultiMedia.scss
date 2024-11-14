@@ -1,0 +1,94 @@
+@media only screen and (max-width: 600px) {
+    #sawy-landing-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 20px 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            ". . . . . "
+            ". sawy-title sawy-title sawy-title . "
+            ". schem-link . apps-link . "
+            ". sawy-video sawy-video sawy-video . "
+            ". sawy-video sawy-video sawy-video . ";
+    }
+
+    #sawy-projects {
+        grid-template-areas: 
+        "projects-header projects-header"
+        "projects-horizontals projects-horizontals" 
+        "projects-verticals projects-verticals";
+    }
+
+    #two-column-container { flex-direction: column }
+    .sawy-sub-section { width: 75%; height: 400px }
+    
+}
+
+@media only screen and (min-width: 600px) {
+    #sawy-title { font-size: 2em;}
+    #sawy-landing-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 20px 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            ". . . . . "
+            ". sawy-title sawy-title sawy-title . "
+            ". schem-link . apps-link . "
+            ". sawy-video sawy-video sawy-video . "
+            ". sawy-video sawy-video sawy-video . ";
+    }
+
+    #sawy-projects {
+        grid-template-areas: 
+        "projects-header projects-header"
+        "projects-horizontals projects-horizontals" 
+        "projects-verticals projects-verticals";
+    }
+
+    #two-column-container { flex-direction: row }
+    .sawy-sub-section { width: 75%; height: 400px }
+}
+
+@media only screen and (min-width: 768px) {
+    #sawy-title { font-size: 3em;}
+    #sawy-landing-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 20px 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            ". . . . . "
+            ". sawy-title sawy-title sawy-title . "
+            ". schem-link . apps-link . "
+            ". sawy-video sawy-video sawy-video . "
+            ". sawy-video sawy-video sawy-video . ";
+    }
+
+    #sawy-projects {
+        grid-template-areas: 
+        "projects-horizontals projects-header"
+        "projects-horizontals projects-verticals";
+    }
+
+    #two-column-container { flex-direction: row }
+    .sawy-sub-section { width: 25%; height: 400px }
+    .link-table { width: 70% }
+} 
+
+@media only screen and (min-width: 992px) {
+    #sawy-landing-content {
+        grid-template-columns: 16% 17% 17% 17% 17% 16%;
+        grid-template-rows: 5% 30% 30% 30% 5%;
+        grid-template-areas: 
+            ". . . . . ."
+            ". sawy-title sawy-title sawy-video sawy-video ."
+            ". apps-link schem-link sawy-video sawy-video ."
+            ". . . . . ."
+            ". . . . . .";
+    }
+
+    #sawy-projects {
+        grid-template-areas: 
+        "projects-horizontals projects-header"
+        "projects-horizontals projects-verticals";
+    }
+
+    #two-column-container { flex-direction: row }
+    .sawy-sub-section { width: 25%; height: 400px }
+    .link-table { width: 70% }
+}

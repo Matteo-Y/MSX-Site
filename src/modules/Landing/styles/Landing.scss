@@ -1,5 +1,7 @@
 @import 'Header.scss';
 
+@import 'Header.scss';
+
 .landing-page {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -59,17 +61,21 @@
   position: relative;
   overflow: hidden;
   z-index: 5;
+  z-index: 5;
 
   &::after {
     content: '';
     position: absolute;
     bottom: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
+    height: 2px;
     height: 2px;
     background-color: white;
     transition: opacity 1s, transform 300ms;
     opacity: 1;
+    transform: translate3d(-110%, 0, 0);
     transform: translate3d(-110%, 0, 0);
   }
 
@@ -193,6 +199,7 @@
       font-size: 55px !important;
     }
   }
+}
 
   .landing-captions {
     position: fixed;
@@ -226,7 +233,7 @@
       }
     }
   }
-}
+
 @media (max-width: 1300px) {
   .landing-captions {
     position: fixed;

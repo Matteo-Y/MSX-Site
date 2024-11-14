@@ -67,6 +67,75 @@
   }
 }
 
+.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: none;
+}
+.sticky-header h1 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-family: "aerospace";
+  font-size: 200px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  transform: translateY(40vh);
+  transition: transform 0.5s;
+}
+.sticky-header h1.animated {
+  animation: headerAnim 1s forwards;
+}
+@media (max-width: 1300px) {
+  .sticky-header h1 {
+    font-size: 100px;
+    transform: translateY(40vh);
+  }
+}
+@media (max-height: 800px) {
+  .sticky-header h1 {
+    font-size: 100px;
+    transform: translateY(40vh);
+  }
+}
+@media (max-width: 550px) {
+  .sticky-header h1 {
+    font-size: 65px;
+    transform: translateY(40vh);
+  }
+  .sticky-header h1.animated {
+    animation: headerAnimMobile 1s forwards;
+  }
+}
+@media (max-height: 400px) {
+  .sticky-header h1 {
+    font-size: 80px;
+  }
+}
+@keyframes headerAnim {
+  0% {
+    transform: translateY(40vh);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes headerAnimMobile {
+  0% {
+    transform: translateY(40vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .landing-page {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -122,17 +191,21 @@
   position: relative;
   overflow: hidden;
   z-index: 5;
+  z-index: 5;
 }
 .underline-anim::after {
   content: "";
   position: absolute;
   bottom: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
+  height: 2px;
   height: 2px;
   background-color: white;
   transition: opacity 1s, transform 300ms;
   opacity: 1;
+  transform: translate3d(-110%, 0, 0);
   transform: translate3d(-110%, 0, 0);
 }
 .underline-anim:hover::after, .underline-anim :focus::after {
@@ -320,7 +393,8 @@
     font-size: 55px !important;
   }
 }
-.custom-section-1 .landing-captions {
+
+.landing-captions {
   position: fixed;
   top: 500px;
   margin: auto;
@@ -328,13 +402,13 @@
   width: fit-content;
   max-width: 40%;
 }
-.custom-section-1 .landing-captions p {
+.landing-captions p {
   color: white;
   font-size: 40px;
   text-shadow: 2px 2px 20px black;
   transition: all 0.2s;
 }
-.custom-section-1 .landing-captions p span {
+.landing-captions p span {
   animation: blink 0.5s infinite;
 }
 @keyframes blink {
@@ -352,12 +426,12 @@
   }
 }
 @media (max-width: 1300px) {
-  .custom-section-1 .landing-captions p {
+  .landing-captions p {
     font-size: 30px;
   }
 }
 @media (max-height: 800px) {
-  .custom-section-1 .landing-captions p {
+  .landing-captions p {
     font-size: 30px;
   }
 }

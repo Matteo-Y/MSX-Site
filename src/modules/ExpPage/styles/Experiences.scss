@@ -1,0 +1,86 @@
+
+.skewed-section {
+    display: flex;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    background-color: black;
+    top: 0;
+    transform: skew(10deg);
+    transition: all 0.2s;
+    overflow: hidden;
+    &:hover{transform: skew(10deg) scale(1.02);}
+    div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        transform: skew(-10deg);
+        h3 {
+            width: 100%;
+            font-size: 40px;
+            text-shadow: 2px 2px 20px black;
+        }
+
+        &.right {margin-left: 200px;}
+        &.center{text-align: center;}
+        &.left{text-align: right;}
+
+        @media (max-width: 1000px) {
+            h3 {
+                font-size: 25px;
+            }
+            &.right {margin-left: 100px;}
+        }
+    }
+}
+
+.skewed-section-1 {
+    left: -10%;
+    width: 42%;
+    height: 100vh;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background-image: url("../images/5.5.jpg");
+        background-position: center;
+        background-size: cover;
+        width: 115%;
+        height: 100vh;
+        transform: skew(-10deg);
+    }
+}
+
+.skewed-section-2 {
+    left: 33%;
+    width: 34%;
+    height: 100vh;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background-image: url("../images/center.jpg");
+        background-position: center;
+        background-size: cover;
+        width: 115%;
+        height: 100vh;
+        transform: skew(-10deg);
+    }
+}
+
+.skewed-section-3 {
+    left: 68%;
+    width: 40%;
+    height: 100vh;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background-image: url("../images/73.jpg");
+        background-position: center;
+        background-size: cover;
+        width: 115%;
+        height: 100vh;
+        transform: skew(-10deg);
+    }
+}

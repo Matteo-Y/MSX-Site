@@ -1,0 +1,93 @@
+.skewed-section {
+  display: flex;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  background-color: black;
+  top: 0;
+  transform: skew(10deg);
+  transition: all 0.2s;
+  overflow: hidden;
+}
+.skewed-section:hover {
+  transform: skew(10deg) scale(1.02);
+}
+.skewed-section div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transform: skew(-10deg);
+}
+.skewed-section div h3 {
+  width: 100%;
+  font-size: 40px;
+  text-shadow: 2px 2px 20px black;
+}
+.skewed-section div.right {
+  margin-left: 200px;
+}
+.skewed-section div.center {
+  text-align: center;
+}
+.skewed-section div.left {
+  text-align: right;
+}
+@media (max-width: 1000px) {
+  .skewed-section div h3 {
+    font-size: 25px;
+  }
+  .skewed-section div.right {
+    margin-left: 100px;
+  }
+}
+
+.skewed-section-1 {
+  left: -10%;
+  width: 42%;
+  height: 100vh;
+}
+.skewed-section-1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../images/5.5.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 115%;
+  height: 100vh;
+  transform: skew(-10deg);
+}
+
+.skewed-section-2 {
+  left: 33%;
+  width: 34%;
+  height: 100vh;
+}
+.skewed-section-2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../images/center.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 115%;
+  height: 100vh;
+  transform: skew(-10deg);
+}
+
+.skewed-section-3 {
+  left: 68%;
+  width: 40%;
+  height: 100vh;
+}
+.skewed-section-3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../images/73.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 115%;
+  height: 100vh;
+  transform: skew(-10deg);
+}/*# sourceMappingURL=Experiences.css.map */

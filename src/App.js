@@ -1,5 +1,5 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
+import './styles/App.scss';
 import Landing from './modules/Landing/Landing.js'
 import Projects from './modules/Projects/Projects.js';
 import ScrollToTop from './modules/Tools/ScrollToTop.js'

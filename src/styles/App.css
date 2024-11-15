@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "aerospace";
+  src: url("../res/fonts/Aerospace.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+.page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.page::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  box-shadow: inset 0 -100px 150px black;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.underline-anim {
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+  z-index: 5;
+}
+.underline-anim::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  height: 2px;
+  background-color: white;
+  transition: opacity 1s, transform 300ms;
+  opacity: 1;
+  transform: translate3d(-110%, 0, 0);
+  transform: translate3d(-110%, 0, 0);
+}
+.underline-anim:hover::after, .underline-anim :focus::after {
+  transform: translate3d(0, 0, 0);
+}
+
+body {
+  font-family: arial;
+  background-color: #333;
+}
+
+h1 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+h2 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+h3 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}/*# sourceMappingURL=App.css.map */

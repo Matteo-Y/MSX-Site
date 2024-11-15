@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'aerospace';
+    src: url('../res/fonts/Aerospace.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import 'Page.scss';
+@import 'Animations.scss';
+
+body {
+  font-family: arial;
+  background-color: #333;
+}
+
+h1 {
+  user-select: none;
+}
+
+h2 {
+  user-select: none;
+}
+
+h3 {
+  user-select: none;
+}
+
+button {
+  user-select: none;
+}

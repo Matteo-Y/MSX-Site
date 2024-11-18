@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.dc488bd0.css",
-    "main.js": "/static/js/main.a3ef9d27.js",
+    "main.css": "/static/css/main.603095d0.css",
+    "main.js": "/static/js/main.5d036efb.js",
     "static/media/60.jpg": "/static/media/60.9859ad8779c005b5108e.jpg",
     "static/media/finger_robot.zip": "/static/media/finger_robot.051363f5a0cd50bbb0b6.zip",
     "static/media/50.jpg": "/static/media/50.7061c91652fc4a8a1af1.jpg",
     "static/media/center.jpg": "/static/media/center.1a4bd4048b3c80dbf03f.jpg",
     "static/media/42.jpg": "/static/media/42.6679478eaa321f119577.jpg",
+    "static/media/2.jpg": "/static/media/2.96ead49c8a3fc2a46af1.jpg",
+    "static/media/3.jpg": "/static/media/3.b2813519780f2223c29f.jpg",
     "static/media/62.jpg": "/static/media/62.d6a08be869eb527d5b49.jpg",
     "static/media/32.jpg": "/static/media/32.58a52af7fc601bf3d035.jpg",
     "static/media/41.jpg": "/static/media/41.23bf8e50895407863545.jpg",
-    "static/media/2.jpg": "/static/media/2.96ead49c8a3fc2a46af1.jpg",
     "static/media/61.jpg": "/static/media/61.f30783c4e6db7f9369b7.jpg",
     "static/media/10.jpg": "/static/media/10.1e3e90605f793c211dfb.jpg",
     "static/media/12.jpg": "/static/media/12.68ee4da130d2815b8f07.jpg",
     "static/media/20.jpg": "/static/media/20.7c4a739d535a0c196edd.jpg",
     "static/media/66.jpg": "/static/media/66.e1cbc1cbf665fd81b63d.jpg",
     "static/media/line_follower_robot.zip": "/static/media/line_follower_robot.00ecf9c50911d112a557.zip",
+    "static/media/sawy_thumbnail.jpg": "/static/media/sawy_thumbnail.da57c348a25be8cd3eaa.jpg",
     "static/media/21.jpg": "/static/media/21.2360330b2b190add17ea.jpg",
     "static/media/30.jpg": "/static/media/30.0ee679c8abe99133d411.jpg",
     "static/media/11.jpg": "/static/media/11.e6bec29b6d38eacdd22c.jpg",
@@ -30,11 +32,11 @@
     "static/media/Aerospace.ttf": "/static/media/Aerospace.0342d6f9ff59f84eda4b.ttf",
     "static/media/default_firmware.zip": "/static/media/default_firmware.5137837e7eb9e172b0a2.zip",
     "index.html": "/index.html",
-    "main.dc488bd0.css.map": "/static/css/main.dc488bd0.css.map",
-    "main.a3ef9d27.js.map": "/static/js/main.a3ef9d27.js.map"
+    "main.603095d0.css.map": "/static/css/main.603095d0.css.map",
+    "main.5d036efb.js.map": "/static/js/main.5d036efb.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc488bd0.css",
-    "static/js/main.a3ef9d27.js"
+    "static/css/main.603095d0.css",
+    "static/js/main.5d036efb.js"
   ]
 }

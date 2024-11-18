@@ -1,7 +1,7 @@
 import "./styles/Scalable.scss";
 
 const Scalable = () => {
-    return (<div className="scalable-content">
+    return (<div className="page scalable-content">
         <img className="background-image" src={require("./bg-images/2.jpg")} alt="bg-images"/>
         <div className="section-center">
             <h2 className="shadowed-text">1,000 UNITS DISTRIBUTED</h2>

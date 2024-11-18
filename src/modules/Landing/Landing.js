@@ -3,6 +3,7 @@ import Banner from '../DefaultBanner/Banner';
 import { useEffect, useState } from 'react';
 import Making from '../MakePage/Making';
 import Experiences from '../ExpPage/Experiences';
+import Scalable from '../ScalePage/Scalable';
 
 const LandingPage = () => {
   const toggleHeaderTrigger = (trigger) => { setHeaderTriggered(trigger) }
@@ -14,7 +15,7 @@ const LandingPage = () => {
     if(changeKey == 0) {setHeaderTriggered(false); setPage(<Banner HeaderCallback={toggleHeaderTrigger}/>);}
     else if(changeKey == 1) setPage(<Making/>);
     else if(changeKey == 2) setPage(<Making/>);
-    else if(changeKey == 3) setPage(<Making/>);
+    else if(changeKey == 3) setPage(<Scalable/>);
     else if(changeKey == 4) setPage(<Experiences/>);
     else if(changeKey == 5) setPage(<Making/>);
   };

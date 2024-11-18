@@ -19,8 +19,9 @@
     pointer-events: none;
 }
 
-.background-image {
+img.background-image {
     position: fixed;
+    object-fit: cover;
     top: 0;
     left: 0;
     width: 100vw;

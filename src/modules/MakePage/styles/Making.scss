@@ -1,4 +1,4 @@
-.scalable-content {
+.making-content {
     color: white;
     .section-center {
         position: fixed;
@@ -48,8 +48,9 @@
             width: 200%;
             height: 100%;
             content: '';
-            background-image: url("../bg-images/sawy_thumbnail.jpg");
+            background-image: url("../bg-images/17.jpg");
             background-size: cover;
+            background-position: center;
             transform: skew(-15deg);
         }
         &:hover {
@@ -81,8 +82,9 @@
             width: 200%;
             height: 100%;
             content: '';
-            background-image: url("../bg-images/3.jpg");
+            background-image: url("../bg-images/21.jpg");
             background-size: cover;
+            background-position: bottom;
             transform: skew(15deg);
         }
         &:hover {

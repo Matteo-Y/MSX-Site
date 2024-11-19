@@ -24,8 +24,10 @@
   pointer-events: none;
 }
 
-.background-image {
+img.background-image {
   position: fixed;
+  -o-object-fit: cover;
+     object-fit: cover;
   top: 0;
   left: 0;
   width: 100vw;
@@ -56,6 +58,10 @@
 }
 .underline-anim:hover::after, .underline-anim :focus::after {
   transform: translate3d(0, 0, 0);
+}
+
+.shadowed-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 body {

@@ -44,6 +44,7 @@
     transform: skew(15deg);
     transition: all 0.2s;
     overflow: hidden;
+    box-shadow: 0 0 100px 10px black;
     &::before {
         position: absolute;
         width: 200%;
@@ -54,7 +55,7 @@
         transform: skew(-15deg);
     }
     &:hover {
-        transform: skew(15deg) scale(1.05);
+        transform: skew(15deg) translateX(2vw);
     }
     .skewed-content {
         width: 100%;
@@ -75,6 +76,7 @@
     transform: skew(-15deg);
     transition: all 0.2s;
     overflow: hidden;
+    box-shadow: 0 0 100px 10px black;
     &::before {
         position: absolute;
         left: -10vw;
@@ -86,7 +88,7 @@
         transform: skew(15deg);
     }
     &:hover {
-        transform: skew(-15deg) scale(1.05);
+        transform: skew(-15deg) translateX(-2vw);
     }
     .skewed-content {
         width: 100%;

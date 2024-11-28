@@ -136,20 +136,20 @@
 @media (max-width: 1300px) {
   .custom-section-1 h3 {
     position: fixed;
-    top: 250px;
+    top: 300px;
     font-size: 120px !important;
   }
 }
 @media (max-width: 800px) {
   .custom-section-1 h3 {
-    top: 250px;
+    top: 300px;
     font-size: 80px !important;
   }
 }
 @media (max-height: 800px) {
   .custom-section-1 h3 {
     position: fixed;
-    top: 200px;
+    top: 230px;
     font-size: 120px !important;
   }
 }
@@ -161,7 +161,7 @@
 }
 @media (max-width: 600px) {
   .custom-section-1 h3 {
-    top: 230px;
+    top: 300px;
     font-size: 55px !important;
   }
 }

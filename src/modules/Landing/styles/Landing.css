@@ -13,12 +13,12 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  font-family: "aerospace";
+  font-family: arial;
   font-size: 150px;
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   cursor: pointer;
-  transform: translateY(40vh);
+  transform: translateY(35vh);
   transition: transform 0.5s;
 }
 .sticky-header h1.animated {
@@ -27,19 +27,19 @@
 @media (max-width: 1300px) {
   .sticky-header h1 {
     font-size: 100px;
-    transform: translateY(40vh);
+    transform: translateY(35vh);
   }
 }
 @media (max-height: 800px) {
   .sticky-header h1 {
     font-size: 100px;
-    transform: translateY(40vh);
+    transform: translateY(35vh);
   }
 }
 @media (max-width: 550px) {
   .sticky-header h1 {
     font-size: 65px;
-    transform: translateY(40vh);
+    transform: translateY(35vh);
   }
   .sticky-header h1.animated {
     animation: headerAnimMobile 1s forwards;
@@ -55,7 +55,7 @@
     transform: translateY(40vh);
   }
   100% {
-    transform: translateY(20px);
+    transform: translateY(0px);
   }
 }
 @keyframes headerAnimMobile {

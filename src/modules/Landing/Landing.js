@@ -1,6 +1,6 @@
 import './styles/Landing.scss';
 import Banner from '../DefaultBanner/Banner';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Making from '../MakePage/Making';
 import Experiences from '../ExpPage/Experiences';
 import Scalable from '../ScalePage/Scalable';
@@ -11,13 +11,13 @@ const LandingPage = () => {
   const [page, setPage] = useState(<Banner HeaderCallback={toggleHeaderTrigger}/>);
 
   const pageChange = (changeKey) => {
-    if(changeKey != 0) setHeaderTriggered(true)
-    if(changeKey == 0) {setHeaderTriggered(false); setPage(<Banner HeaderCallback={toggleHeaderTrigger}/>);}
-    else if(changeKey == 1) setPage(<Making/>);
-    else if(changeKey == 2) setPage(<Making/>);
-    else if(changeKey == 3) setPage(<Scalable/>);
-    else if(changeKey == 4) setPage(<Experiences/>);
-    else if(changeKey == 5) setPage(<Making/>);
+    if(changeKey !== 0) setHeaderTriggered(true)
+    if(changeKey === 0) {setHeaderTriggered(false); setPage(<Banner HeaderCallback={toggleHeaderTrigger}/>);}
+    else if(changeKey === 1) setPage(<Making/>);
+    else if(changeKey === 2) setPage(<Making/>);
+    else if(changeKey === 3) setPage(<Scalable/>);
+    else if(changeKey === 4) setPage(<Experiences/>);
+    else if(changeKey === 5) setPage(<Making/>);
   };
 
  
@@ -25,7 +25,7 @@ const LandingPage = () => {
     <div className="landing-page">
       <header className="sticky-header">
         <h1 className={headerTriggered ? "animated" : ""} onClick={() => pageChange(0)}>
-          SUBOTIX
+          MSX
         </h1>
       </header>
       {page}

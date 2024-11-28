@@ -128,21 +128,21 @@
   border: none;
   color: white;
   position: fixed;
-  top: 300px;
-  font-size: 200px !important;
+  top: 350px;
+  font-size: 150px !important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin: 0;
 }
 @media (max-width: 1300px) {
   .custom-section-1 h3 {
     position: fixed;
-    top: 200px;
+    top: 250px;
     font-size: 120px !important;
   }
 }
 @media (max-width: 800px) {
   .custom-section-1 h3 {
-    top: 200px;
+    top: 250px;
     font-size: 80px !important;
   }
 }

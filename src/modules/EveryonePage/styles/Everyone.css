@@ -1,0 +1,42 @@
+.everyone-bento {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100%;
+  grid-template-areas: "g1 g2 g3";
+}
+
+.everyone-bg1::before {
+  display: block;
+  position: relative;
+  content: "";
+  left: -20%;
+  width: 140%;
+  height: 100%;
+  transform: skew(10deg);
+  background-image: url("../images/1.jpg");
+  background-size: cover;
+}
+
+.everyone-bg2::before {
+  display: block;
+  position: relative;
+  content: "";
+  left: -20%;
+  width: 140%;
+  height: 100%;
+  transform: skew(10deg);
+  background-image: url("../images/3.jpg");
+  background-size: cover;
+}
+
+.everyone-bg3::before {
+  display: block;
+  position: relative;
+  content: "";
+  left: -20%;
+  width: 140%;
+  height: 100%;
+  transform: skew(10deg);
+  background-image: url("../images/2.jpg");
+  background-size: cover;
+  background-position: center;
+}/*# sourceMappingURL=Everyone.css.map */

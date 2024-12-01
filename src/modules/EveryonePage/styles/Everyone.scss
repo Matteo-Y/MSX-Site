@@ -1,0 +1,6 @@
+.everyone-bento {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "g1 g2 g3";
+}

@@ -24,3 +24,33 @@
       transform: translate3d(0, 0, 0);
     }
 }
+
+.slide-from-top {
+  transform: translateY(-100%);
+  animation: slide-down .5s forwards ease-out;
+  &.delay-100 {animation-delay: 100ms}
+  &.delay-200 {animation-delay: 200ms}
+  &.delay-300 {animation-delay: 300ms}
+  &.delay-400 {animation-delay: 400ms}
+  &.delay-500 {animation-delay: 500ms}
+  @keyframes slide-down {
+    0% {transform: translateY(-100%); opacity: .4;}
+    20% {opacity: .4}
+    100% {transform: translateY(0); opacity: 1}
+  }
+}
+
+.slide-from-bottom {
+  transform: translateY(-100%);
+  animation: slide-up .5s forwards ease-out;
+  &.delay-100 {animation-delay: 100ms}
+  &.delay-200 {animation-delay: 200ms}
+  &.delay-300 {animation-delay: 300ms}
+  &.delay-400 {animation-delay: 400ms}
+  &.delay-500 {animation-delay: 500ms}
+  @keyframes slide-up {
+    0% {transform: translateY(100%); opacity: .4;}
+    20% {opacity: .4}
+    100% {transform: translateY(0); opacity: 1}
+  }
+}

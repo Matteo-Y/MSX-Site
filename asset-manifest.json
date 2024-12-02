@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f9014f14.css",
-    "main.js": "/static/js/main.9e956a15.js",
+    "main.css": "/static/css/main.52a07e5f.css",
+    "main.js": "/static/js/main.26c03e9e.js",
     "static/media/finger_robot.zip": "/static/media/finger_robot.051363f5a0cd50bbb0b6.zip",
     "static/media/center.jpg": "/static/media/center.1a4bd4048b3c80dbf03f.jpg",
     "static/media/2.jpg": "/static/media/2.46ee58257f1e0d572fc8.jpg",
@@ -39,11 +39,11 @@
     "static/media/Aerospace.ttf": "/static/media/Aerospace.0342d6f9ff59f84eda4b.ttf",
     "static/media/default_firmware.zip": "/static/media/default_firmware.5137837e7eb9e172b0a2.zip",
     "index.html": "/index.html",
-    "main.f9014f14.css.map": "/static/css/main.f9014f14.css.map",
-    "main.9e956a15.js.map": "/static/js/main.9e956a15.js.map"
+    "main.52a07e5f.css.map": "/static/css/main.52a07e5f.css.map",
+    "main.26c03e9e.js.map": "/static/js/main.26c03e9e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9014f14.css",
-    "static/js/main.9e956a15.js"
+    "static/css/main.52a07e5f.css",
+    "static/js/main.26c03e9e.js"
   ]
 }

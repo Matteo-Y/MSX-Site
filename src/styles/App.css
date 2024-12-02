@@ -322,8 +322,6 @@ img.background-image.full-page {
 body {
   font-family: arial;
   background-color: #333;
-  min-width: 500px;
-  overflow: auto;
 }
 
 h1 {

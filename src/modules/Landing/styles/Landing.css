@@ -18,7 +18,7 @@
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   cursor: pointer;
-  transform: translateY(35vh);
+  transform: translateY(200px);
   transition: transform 0.5s;
 }
 .sticky-header h1.animated {
@@ -27,19 +27,19 @@
 @media (max-width: 1300px) {
   .sticky-header h1 {
     font-size: 100px;
-    transform: translateY(35vh);
+    transform: translateY(200px);
   }
 }
 @media (max-height: 800px) {
   .sticky-header h1 {
     font-size: 100px;
-    transform: translateY(35vh);
+    transform: translateY(200px);
   }
 }
 @media (max-width: 550px) {
   .sticky-header h1 {
     font-size: 65px;
-    transform: translateY(35vh);
+    transform: translateY(200px);
   }
   .sticky-header h1.animated {
     animation: headerAnimMobile 1s forwards;
@@ -52,7 +52,7 @@
 }
 @keyframes headerAnim {
   0% {
-    transform: translateY(40vh);
+    transform: translateY(200px);
   }
   100% {
     transform: translateY(0px);
@@ -60,7 +60,7 @@
 }
 @keyframes headerAnimMobile {
   0% {
-    transform: translateY(40vh);
+    transform: translateY(200px);
   }
   100% {
     transform: translateY(0);

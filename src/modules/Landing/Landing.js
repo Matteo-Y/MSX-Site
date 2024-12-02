@@ -11,6 +11,11 @@ const LandingPage = () => {
   const toggleHeaderTrigger = (trigger) => { setHeaderTriggered(trigger) }
   const [headerTriggered, setHeaderTriggered] = useState(false);
   const [page, setPage] = useState(<Banner HeaderCallback={toggleHeaderTrigger}/>);
+  const [showNumber, setShowNumber] = useState(false);
+
+  const toggleNumber = () => {
+    setShowNumber(!showNumber);
+  }
 
   const pageChange = (changeKey) => {
     if(changeKey !== 0) setHeaderTriggered(true)
@@ -29,6 +34,8 @@ const LandingPage = () => {
         <h1 className={headerTriggered ? "animated" : ""} onClick={() => pageChange(0)}>
           MSX
         </h1>
+        <img src={require("./res/whatsapp-svgrepo-com.png")} alt="WhatsApp" className="whatsapp-icon" onClick={toggleNumber}/>
+        <div className={"phone-number" + (showNumber ? "" : " collapsed")}>SA: +966 55 819 9114 <br/> US: +1 832 273 1434</div>
       </header>
       {page}
       <div className="landing-nav">

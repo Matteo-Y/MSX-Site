@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.617e5bb6.css",
+    "main.css": "/static/css/main.361449dc.css",
     "main.js": "/static/js/main.92265a13.js",
     "static/media/finger_robot.zip": "/static/media/finger_robot.051363f5a0cd50bbb0b6.zip",
     "static/media/center.jpg": "/static/media/center.1a4bd4048b3c80dbf03f.jpg",
     "static/media/2.jpg": "/static/media/2.46ee58257f1e0d572fc8.jpg",
-    "static/media/3.jpg": "/static/media/3.4c1c20c053a0f1d1871a.jpg",
     "static/media/32.jpg": "/static/media/32.58a52af7fc601bf3d035.jpg",
+    "static/media/3.jpg": "/static/media/3.4c1c20c053a0f1d1871a.jpg",
     "static/media/SADA1.jpg": "/static/media/SADA1.283adce323c8c61e1f12.jpg",
     "static/media/41.jpg": "/static/media/41.f05c1bd178762742a917.jpg",
     "static/media/42.jpg": "/static/media/42.d751a48718bbc145a0be.jpg",
@@ -24,7 +24,6 @@
     "static/media/66.jpg": "/static/media/66.e1cbc1cbf665fd81b63d.jpg",
     "static/media/line_follower_robot.zip": "/static/media/line_follower_robot.00ecf9c50911d112a557.zip",
     "static/media/22.jpg": "/static/media/22.463ab5fcf0557048f240.jpg",
-    "static/media/sawy_thumbnail.jpg": "/static/media/sawy_thumbnail.da57c348a25be8cd3eaa.jpg",
     "static/media/30.jpg": "/static/media/30.0ee679c8abe99133d411.jpg",
     "static/media/52.jpeg": "/static/media/52.b8c1d0dd0ba7dae0eeb6.jpeg",
     "static/media/11.jpg": "/static/media/11.e6bec29b6d38eacdd22c.jpg",
@@ -39,11 +38,11 @@
     "static/media/Aerospace.ttf": "/static/media/Aerospace.0342d6f9ff59f84eda4b.ttf",
     "static/media/default_firmware.zip": "/static/media/default_firmware.5137837e7eb9e172b0a2.zip",
     "index.html": "/index.html",
-    "main.617e5bb6.css.map": "/static/css/main.617e5bb6.css.map",
+    "main.361449dc.css.map": "/static/css/main.361449dc.css.map",
     "main.92265a13.js.map": "/static/js/main.92265a13.js.map"
   },
   "entrypoints": [
-    "static/css/main.617e5bb6.css",
+    "static/css/main.361449dc.css",
     "static/js/main.92265a13.js"
   ]
 }

@@ -3,6 +3,14 @@
     "g1 g2 g3";
 }
 
+@media (max-width: 800px) {
+    .making-bento {
+        grid-template-areas:
+        "g1 g3"
+        "g2 g3";
+    }
+}
+
 .make-el1 {
     
 }

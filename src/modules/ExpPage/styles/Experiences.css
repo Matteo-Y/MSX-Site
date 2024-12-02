@@ -1,4 +1,9 @@
 .exp-bento {
-  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "g1 g2 g3";
+}
+
+@media (max-width: 800px) {
+  .exp-bento {
+    grid-template-areas: "g1 g3" "g2 g3";
+  }
 }/*# sourceMappingURL=Experiences.css.map */

@@ -1,7 +1,5 @@
 .impact-bento {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "g1 g3" "g2 g3";
+  grid-template-areas: "g2 g3" "g1 g3";
 }
 
 .impact-bg1::before {

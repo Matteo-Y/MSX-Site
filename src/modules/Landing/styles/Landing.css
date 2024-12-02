@@ -28,19 +28,19 @@
 }
 @media (max-width: 1300px) {
   .sticky-header h1 {
-    font-size: 100px;
+    font-size: 110px;
     transform: translateY(200px);
   }
 }
 @media (max-height: 800px) {
   .sticky-header h1 {
-    font-size: 100px;
+    font-size: 110px;
     transform: translateY(200px);
   }
 }
 @media (max-width: 550px) {
   .sticky-header h1 {
-    font-size: 65px;
+    font-size: 70px;
     transform: translateY(200px);
   }
   .sticky-header h1.animated {
@@ -49,7 +49,7 @@
 }
 @media (max-height: 400px) {
   .sticky-header h1 {
-    font-size: 80px;
+    font-size: 90px;
   }
 }
 @keyframes headerAnim {
@@ -72,6 +72,8 @@
 .whatsapp-icon {
   width: 50px;
   position: fixed;
+  -o-object-fit: contain;
+     object-fit: contain;
   top: 40px;
   right: 30px;
   filter: drop-shadow(5px 5px 5px black);
@@ -168,10 +170,5 @@
     top: -50px;
     background-color: white;
     z-index: 3;
-  }
-}
-@media (max-height: 600px) {
-  .landing-nav {
-    display: none;
   }
 }/*# sourceMappingURL=Landing.css.map */

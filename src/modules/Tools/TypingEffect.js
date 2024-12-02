@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const TypingEffect = ({ words, index, typeSpeed = 100, delSpeed = 50 }) => {
+const TypingEffect = ({ words, index, typeSpeed = 100, delSpeed = 50, flicker=true}) => {
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0); // Track the current character index
@@ -39,7 +39,7 @@ const TypingEffect = ({ words, index, typeSpeed = 100, delSpeed = 50 }) => {
     setIsDeleting(true); // Start by deleting the current text
   }, [index]);
 
-  return <p>{displayedText}<span> l</span></p>;
+  return <p style={{margin: "0"}} className="shadowed-text">{displayedText}{flicker ? (<span> l</span>) : ""}</p>;
 };
 
 export default TypingEffect;

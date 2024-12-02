@@ -21,18 +21,18 @@ const Banner = ({HeaderCallback}) => {
     const [landingTitleIndex, setLandingTitleIndex] = useState(0);
 
     useEffect(() => {
-        const stepIntervalMs = 800;
+        const stepIntervalMs = 1000;
         const incrementStep = (currentStep) => (currentStep < 1000000 ? currentStep + 1 : 0);
         const interval = setInterval(() => setStep((step) => incrementStep(step)), stepIntervalMs);
         return () => clearInterval(interval);
       }, []);
     
     useEffect(() => {
-        const introLength = 12;
-        if (step === 4) setLandingImageIndex(11);
-        if (step === 8) setLandingImageIndex(12);
-        if (step === 11) setLandingCaptionIndex(1);
-        if (step > 10) {HeaderCallback(true)}
+        const introLength = 16;
+        if (step === 5) setLandingImageIndex(11);
+        if (step === 10) setLandingImageIndex(12);
+        if (step === 15) setLandingCaptionIndex(1);
+        if (step > 14) {HeaderCallback(true)}
     
         const totalStepCount = 60;
         const currentStep = (step - introLength) % totalStepCount;

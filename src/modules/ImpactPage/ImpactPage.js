@@ -10,12 +10,12 @@ const Impact = () => {
             </div>
             <div className="impact-bg2 grid-el grid-area-2 slide-from-left delay-500">
                 <div className="skewed-div right">
-                    <h3 className="shadowed-text margin-auto title-small">AFFECTING <br/> COMMUNITIES</h3>
+                    <h3 className="shadowed-text margin-auto title-small">TRANSFORMING <br/> COMMUNITIES</h3>
                 </div>
             </div>
             <div className="impact-bg3 grid-el grid-area-3 slide-from-bottom delay-400">
                 <div className="skewed-div right">
-                    <h3 className="shadowed-text margin-auto title-small">CHANGING LIVES</h3>
+                    <h3 className="shadowed-text margin-auto title-small">LIFE CHANGING</h3>
                 </div>
             </div>
         </div> 

@@ -23,26 +23,26 @@
     }
     @media (max-width: 1300px) {
       h1 {
-        font-size: 100px;
+        font-size: 110px;
         transform: translateY(200px);
       }
     }
     @media (max-height: 800px) {
       h1 {
-        font-size: 100px;
+        font-size: 110px;
         transform: translateY(200px);
       }
     }
     @media (max-width: 550px) {
       h1 {
-        font-size: 65px;
+        font-size: 70px;
         transform: translateY(200px);
         &.animated {animation: headerAnimMobile 1s forwards;}
       }
     }
     @media (max-height: 400px) {
       h1 {
-        font-size: 80px;
+        font-size: 90px;
       }
     }
 
@@ -67,6 +67,7 @@
 .whatsapp-icon {
     width: 50px;
     position: fixed;
+    object-fit: contain;
     top: 40px;
     right: 30px;
     filter: drop-shadow(5px 5px 5px black);

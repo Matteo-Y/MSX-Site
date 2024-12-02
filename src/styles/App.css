@@ -188,15 +188,33 @@ img.background-image.full-page {
 }
 
 .shadowed-text {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 8px rgb(0, 0, 0);
 }
 
+.margin-auto {
+  margin: auto;
+}
+
+.title-small {
+  font-size: 30px;
+}
+
+@media (max-width: 800px) {
+  .title-small {
+    font-size: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .title-small {
+    font-size: 15px;
+  }
+}
 .skewed-bento {
   position: fixed;
-  width: 110vw;
+  width: 120vw;
   height: 100%;
   top: 0;
-  left: -5vw;
+  left: -10vw;
   display: grid;
   grid-gap: 8px;
 }
@@ -227,6 +245,25 @@ img.background-image.full-page {
   height: 100%;
   margin: 0;
   transform-style: preserve-3d;
+}
+
+.skewed-div {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+}
+.skewed-div.left {
+  transform: skew(-10deg);
+}
+.skewed-div.right {
+  transform: skew(10deg);
 }
 
 .skewed-img.left {
@@ -311,6 +348,10 @@ button {
           user-select: none;
 }
 
+img {
+  transition: all 0.2s;
+}
+
 .hidden {
-  display: none;
+  opacity: 0;
 }/*# sourceMappingURL=App.css.map */

@@ -1,9 +1,9 @@
 .skewed-bento {
     position: fixed;
-    width: 110vw;
+    width: 120vw;
     height: 100%;
     top: 0;
-    left: -5vw;
+    left: -10vw;
     display: grid;
     grid-gap: 8px;
     &.right {
@@ -34,6 +34,25 @@
     height: 100%;
     margin: 0;
     transform-style: preserve-3d;
+}
+
+.skewed-div {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    &.left {
+        transform: skew(-10deg); 
+    }
+    &.right {
+        transform: skew(10deg); 
+    }
 }
 
 .skewed-img {

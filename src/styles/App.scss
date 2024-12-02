@@ -32,6 +32,10 @@ button {
   user-select: none;
 }
 
+img {
+  transition: all 0.2s;
+}
+
 .hidden {
-  display: none;
+  opacity: 0;
 }

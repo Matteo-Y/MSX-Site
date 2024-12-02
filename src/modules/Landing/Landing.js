@@ -12,6 +12,7 @@ const LandingPage = () => {
   const toggleHeaderTrigger = (trigger) => { setHeaderTriggered(trigger) }
   const [headerTriggered, setHeaderTriggered] = useState(false);
   const [page, setPage] = useState(<Banner HeaderCallback={toggleHeaderTrigger}/>);
+  const [pageKey, setPageKey] = useState(0);
   const [showNumber, setShowNumber] = useState(false);
 
   const toggleNumber = () => {
@@ -19,6 +20,8 @@ const LandingPage = () => {
   }
 
   const pageChange = (changeKey) => {
+    if(changeKey === pageKey) return;
+    else setPageKey(changeKey);
     if(changeKey !== 0) setHeaderTriggered(true)
     if(changeKey === 0) {setHeaderTriggered(false); setPage(<Banner HeaderCallback={toggleHeaderTrigger}/>);}
     else if(changeKey === 1) setPage(<Making/>);

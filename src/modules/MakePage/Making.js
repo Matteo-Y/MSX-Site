@@ -1,22 +1,19 @@
 import './styles/Making.scss';
 
 const Making = () => {
-    return (<div className="page making-content">
-        <img className="background-image" src={require("./bg-images/52-transformed.png")} alt="bg-images"/>
-        <div className="section-center">
-            <h2 className="shadowed-text">IMBUING YOU WITH <br/> SKILLS <br/> AND <br/> KNOWLEDGE</h2>
+    return <div className="page">
+        <div className="skewed-bento left making-bento">
+            <div className="grid-el grid-area-1 make-el slide-from-bottom delay-200">
+                <img className="skewed-img left background-img" src={require("./bg-images/17.jpg")} alt="image" loading="lazy"/>
+            </div>
+            <div className="grid-el grid-area-2 make-el slide-from-bottom delay-400">
+                <img className="skewed-img left background-img" src={require("./bg-images/53.png")} alt="image" loading="lazy"/>
+            </div>
+            <div className="grid-el grid-area-3 make-el slide-from-bottom delay-600">
+                <img className="skewed-img left background-img" src={require("./bg-images/22.jpg")} alt="image" loading="lazy"/>
+            </div>
         </div>
-        <div className="section-left">
-            <div className="skewed-content">
-                <h3 className="shadowed-text">INSPIRING TO <br/> INSPIRE OTHERS</h3>
-            </div> 
-        </div>
-        <div className="section-right">
-            <div className="skewed-content">
-                <h3 className="shadowed-text">PREPARING FOR <br/> THE FUTURE</h3>
-            </div> 
-        </div>
-    </div>);
+    </div>
 }
 
 export default Making;

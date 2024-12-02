@@ -1,25 +1,19 @@
 import './styles/Experiences.scss';
 
 const Experiences = () => {
-
-    return (<div className="page">
-        <div className="skewed-section skewed-section-1">
-            <div className="right">
-                <h3>BIG <br/> MAKES</h3>
+    return <div className="page">
+        <div className="skewed-bento left exp-bento">
+            <div className="grid-el grid-area-1 exp-grid slide-from-bottom delay-200">
+                <img className="skewed-img left background-img" src={require("./images/5.jpg")} alt="thing 1" loading="lazy"/>
+            </div>
+            <div className="grid-el grid-area-2 exp-grid slide-from-top delay-400">
+                <img className="skewed-img left background-img" src={require("./images/center.jpg")} alt="thing 1" loading="lazy"/>
+            </div> 
+            <div className="grid-el grid-area-3 exp-grid slide-from-bottom delay-600">
+                <img className="skewed-img left background-img" src={require("./images/73.jpg")} alt="thing 1" loading="lazy"/>
             </div>
         </div>
-        <div className="skewed-section skewed-section-2"> 
-            <div className="center">
-                <h3>COMMUNITY <br/> EVENTS</h3>
-            </div>
-        </div>
-        <div className="skewed-section skewed-section-3">
-            <div className="left">
-                <h3>MAKER <br/> SPACES</h3>
-            </div>
-        </div>
-    </div>)
-
+    </div>
 }
 
 export default Experiences

@@ -1,0 +1,55 @@
+.skewed-bento {
+    position: fixed;
+    width: 110vw;
+    height: 100%;
+    top: 0;
+    left: -5vw;
+    display: grid;
+    grid-gap: 8px;
+    &.right {
+        transform: skew(-10deg); 
+    }
+    &.left {
+        transform: skew(10deg); 
+    }
+}
+
+.grid-area-1 {
+    grid-area: g1;
+}
+
+.grid-area-2 {
+    grid-area: g2;
+}
+
+.grid-area-3 {
+    grid-area: g3;
+}
+
+.grid-el {
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transform-style: preserve-3d;
+}
+
+.skewed-img {
+    &.left {
+        transform: skew(-10deg); 
+    }
+    &.right {
+        transform: skew(10deg); 
+    }
+
+    &.background-img {
+        position: absolute;
+        top: 0;
+        left: -20%;
+        width: 140%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

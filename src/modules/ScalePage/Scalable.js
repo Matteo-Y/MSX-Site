@@ -1,23 +1,19 @@
 import "./styles/Scalable.scss";
 
 const Scalable = () => {
-    return (<div className="page scalable-content">
-        <img className="background-image" src={require("./bg-images/2.jpg")} alt="bg-images" loading="lazy"/>
-        <div className="section-center">
-            <h2 className="shadowed-text">SAWY SAWY INITIATIVE</h2>
-            <div>IN PARTNERSHIP WITH</div>
+    return <div className="page">
+        <div className="skewed-bento right scalable-bento">
+            <div className="grid-el grid-area-1 scalable-el slide-from-top delay-200">
+                <img className="skewed-img right background-img" src={require("./bg-images/1.jpeg")} alt="test" loading="lazy"/>
+            </div>
+            <div className="grid-el grid-area-2 scalable-el slide-from-bottom delay-400">
+                <img className="skewed-img right background-img" src={require("./bg-images/2.jpg")} alt="test" loading="lazy"/>
+            </div>
+            <div className="grid-el grid-area-3 scalable-el slide-from-top delay-600">
+                <img className="skewed-img right background-img" src={require("./bg-images/3.jpg")} alt="test" loading="lazy"/>
+            </div>
         </div>
-        <div className="section-left">
-            <div className="skewed-content">
-                <h3 className="shadowed-text">WORKSHOPS & KITS</h3>
-            </div> 
-        </div>
-        <div className="section-right">
-            <div className="skewed-content">
-                <h3 className="shadowed-text">MAKER SPACES</h3>
-            </div> 
-        </div>
-    </div>)
+    </div>
 }
 
 export default Scalable;

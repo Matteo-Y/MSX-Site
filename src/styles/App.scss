@@ -8,6 +8,8 @@
 @import 'Page.scss';
 @import 'Animations.scss';
 @import 'UIstyles.scss';
+@import 'Skewed-divs';
+@import 'Trapezoid-div';
 
 body {
   font-family: arial;
@@ -28,4 +30,8 @@ h3 {
 
 button {
   user-select: none;
+}
+
+.hidden {
+  display: none;
 }

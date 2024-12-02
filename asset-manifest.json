@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.1373d9fb.css",
+    "main.css": "/static/css/main.d57ad543.css",
     "main.js": "/static/js/main.62aaa2c8.js",
     "static/media/finger_robot.zip": "/static/media/finger_robot.051363f5a0cd50bbb0b6.zip",
     "static/media/center.jpg": "/static/media/center.1a4bd4048b3c80dbf03f.jpg",
@@ -39,11 +39,11 @@
     "static/media/Aerospace.ttf": "/static/media/Aerospace.0342d6f9ff59f84eda4b.ttf",
     "static/media/default_firmware.zip": "/static/media/default_firmware.5137837e7eb9e172b0a2.zip",
     "index.html": "/index.html",
-    "main.1373d9fb.css.map": "/static/css/main.1373d9fb.css.map",
+    "main.d57ad543.css.map": "/static/css/main.d57ad543.css.map",
     "main.62aaa2c8.js.map": "/static/js/main.62aaa2c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.1373d9fb.css",
+    "static/css/main.d57ad543.css",
     "static/js/main.62aaa2c8.js"
   ]
 }
